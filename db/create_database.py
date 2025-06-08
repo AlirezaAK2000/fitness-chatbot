@@ -1,4 +1,6 @@
+from werkzeug.security import generate_password_hash, check_password_hash
 import sqlite3
+import json
 
 DB_PATH = 'fitness.db'
 
@@ -52,3 +54,24 @@ def create_database(db_path: str = DB_PATH):
     conn.close()
 
     print(f"SQLite database '{db_path}' created/verified with updated schema.") 
+
+
+def insert_dummy_data(db_mg):
+
+    with open("data/users.json", 'r') as f:
+        users = json.loads(json.load(f))
+
+    for user in users['users']:
+        db_mg.create_user(
+            email = user['email'],
+            password_hash = generate_password_hash(user['password']),
+            first_name = user['first_name'],
+            last_name = user['last_name'],
+            date_of_birth = user['date_of_birth'],
+            sex =  user['sex'],
+            height_cm = user['height_cm'],
+            weight_kg = user['weight_kg'],
+            activity_level = user['activity_level'],
+            dietary_pref = user['dietary_pref'],
+            fitness_goals = user['fitness_goals'],
+        )

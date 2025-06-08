@@ -1,14 +1,16 @@
 import sqlite3
 import os
 from typing import Optional, List, Dict, Any
-from db.create_database import create_database, DB_PATH
+from db.create_database import create_database, DB_PATH, insert_dummy_data
 
 class FitnessDB:
-    def __init__(self, db_path: str = DB_PATH):
+    def __init__(self, db_path: str = DB_PATH, use_dummy_data = True):
         # Ensure database file exists; create schema if not
         self.db_path = db_path
         if not os.path.exists(self.db_path):
             create_database(self.db_path)
+            if use_dummy_data:
+                insert_dummy_data(self)
 
     def _connect(self):
         conn = sqlite3.connect(self.db_path)
