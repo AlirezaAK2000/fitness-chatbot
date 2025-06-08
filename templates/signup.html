@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+<h2>Sign Up</h2>
+<form method="post">
+  <label>Email:</label>
+  <input type="email" name="email" required>
+
+  <label>Password:</label>
+  <input type="password" name="password" required>
+
+  <label>First Name:</label>
+  <input type="text" name="first_name">
+
+  <label>Last Name:</label>
+  <input type="text" name="last_name">
+
+  <label>Date of Birth:</label>
+  <input type="date" name="date_of_birth">
+
+  <label>Sex:</label>
+  <select name="sex">
+    <option value="M">Male</option>
+    <option value="F">Female</option>
+    <option value="O">Other</option>
+  </select>
+
+  <label>Height (cm):</label>
+  <input type="number" name="height_cm" step="0.01">
+
+  <label>Weight (kg):</label>
+  <input type="number" name="weight_kg" step="0.01">
+
+  <label>Activity Level:</label>
+  <input type="text" name="activity_level">
+
+  <label>Dietary Preferences:</label>
+  <input type="text" name="dietary_pref">
+
+  <label>Fitness Goals:</label>
+  <input type="text" name="fitness_goals">
+
+  <button type="submit">Sign Up</button>
+</form>
+<p>Already have an account? <a href="{{ url_for('login') }}">Log In</a></p>
+{% endblock %}

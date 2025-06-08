@@ -1,0 +1,10 @@
+# .gitignore
+venv/
+__pycache__/
+.chainlit/
+.ipynb_checkpoints
+chainlit.md
+*.pyc
+.env
+*.sqlite3
+fitness.db
