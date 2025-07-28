@@ -10,6 +10,7 @@ class PlannerGraph(Graph):
         super().__init__(llm, UserMessages)
         self.db_manager = db_manager
         self.planner_sys_prompt = planner_sys_prompt
+        self.llm = llm
     
     
     def node_plan(self, state):

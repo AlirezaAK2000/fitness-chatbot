@@ -4,17 +4,20 @@ import chainlit as cl
 from dotenv import load_dotenv
 from langchain.schema.runnable.config import RunnableConfig
 from langchain_core.messages import AIMessage, HumanMessage
-from langchain_google_genai import ChatGoogleGenerativeAI
+# from langchain_google_genai import ChatGoogleGenerativeAI
 from agents.planner import PlannerGraph
 from agents.prompt import FITNESS_SYSTEM_PROMPT
 from db.db_manager import FitnessDB
+from langchain_openai import ChatOpenAI
 
 load_dotenv()
 
 
-llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash-preview-05-20",
-    
+llm = ChatOpenAI(
+    model='deepseek/deepseek-r1-0528:free',
+    base_url="https://openrouter.ai/api/v1",
+    api_key=os.environ['OPEN_ROUTER_KEY'],
+    temperature=0.15
 )
 
 db_manager = FitnessDB()
