@@ -4,3 +4,4 @@ from typing import List, Literal
 
 class UserMessages(MessagesState):
     user_id: int
+    log_summary: str

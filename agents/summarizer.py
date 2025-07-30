@@ -1,8 +1,9 @@
-from langchain_core.messages import SystemMessage
+from langchain_core.messages import SystemMessage, HumanMessage
 from langgraph.graph import END, START, StateGraph
 from agents.graph import Graph
 from db.db_manager import FitnessDB
 from agents.state_schema import UserMessages
+from utils import log_function_call
 
 
 class SummarizerGraph(Graph):
@@ -12,7 +13,7 @@ class SummarizerGraph(Graph):
         self.prompt = prompt
         self.num_logs = num_logs
         
-
+    @log_function_call
     def node_summarize(self, state):
         logs = self.db_manager.get_last_progress(state['user_id'], num_logs=self.num_logs)
         if len(logs) == 0:
@@ -21,7 +22,7 @@ class SummarizerGraph(Graph):
         logs = [log['details'] for log in logs]
         
         messages = [
-            SystemMessage(
+            HumanMessage(
                 content = self.prompt.format(logs = logs)
             )
         ]

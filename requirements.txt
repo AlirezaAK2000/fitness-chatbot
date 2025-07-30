@@ -52,7 +52,7 @@ jsonpatch==1.33
 jsonpointer==3.0.0
 lancedb==0.18.0
 langchain==0.3.17
-langchain-community==0.3.16
+langchain-community
 langchain-core==0.3.33
 langchain-google-genai==2.0.7
 langchain-openai==0.2.14
@@ -152,3 +152,4 @@ yarl==1.18.3
 zipp==3.21.0
 langchain_openai
 chainlit
+tavily-python
