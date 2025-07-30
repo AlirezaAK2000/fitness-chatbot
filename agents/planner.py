@@ -36,7 +36,7 @@ class PlannerGraph(Graph):
     @log_function_call
     def node_log_summary(self, state):
         log_summarized_msgs = self.summarizer.invoke({'user_id': state['user_id']})
-        if log_summarized_msgs:
+        if log_summarized_msgs['messages']:
             return {'log_summary': log_summarized_msgs['messages'][0].content}
         return {'log_summary': None}
         

@@ -1,9 +1,12 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, session
+from flask import Flask, render_template, request, redirect, url_for, flash, session, current_app
 from werkzeug.security import generate_password_hash, check_password_hash
 from db.db_manager import FitnessDB
+import secrets
 
 app = Flask(__name__)
 app.secret_key = 'sadjknaskdnkjasndkasjndkj'
+app.config['CHAT_SERVICE_URL'] = 'http://localhost:8000/auth/header'
+
 
 db = FitnessDB()
 
@@ -20,11 +23,25 @@ def login():
         password = request.form['password']
         user = db.get_user_by_email(email)
         if user and check_password_hash(user['password_hash'], password):
+            # generate a new token
+            token = secrets.token_urlsafe(32)
+
+            # save it in the DB
+            db.set_auth_token(user['user_id'], token)
+
+            # you can still set the session if you like
             session['user_id'] = user['user_id']
-            flash('Logged in successfully.', 'success')
-            return redirect(url_for('dashboard'))
+
+            # return JSON for API clients, or embed in template
+            chat_url = current_app.config['CHAT_SERVICE_URL']
+            resp = redirect(chat_url)
+            resp.headers.add('token', token)
+            return resp
+
         flash('Invalid credentials.', 'error')
+
     return render_template('login.html')
+
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
@@ -33,6 +50,8 @@ def signup():
         if db.get_user_by_email(email):
             flash('Email already registered.', 'error')
             return redirect(url_for('signup'))
+
+        # 1) create the user
         password = request.form['password']
         hash_pw = generate_password_hash(password)
         user_id = db.create_user(
@@ -48,17 +67,41 @@ def signup():
             dietary_pref=request.form.get('dietary_pref'),
             fitness_goals=request.form.get('fitness_goals')
         )
+
+        # 2) generate & save a new auth token
+        token = secrets.token_urlsafe(32)
+        db.set_auth_token(user_id, token)
+
+        # 3) log them into the session
         session['user_id'] = user_id
         flash('Account created and logged in.', 'success')
-        return redirect(url_for('dashboard'))
+
+        # — OPTION A: return JSON (for API clients) —
+        # return {'message': 'Signed up', 'token': token}, 201
+
+        # — OPTION B: set it as an HTTP‑only cookie (for browser clients) —
+        chat_url = current_app.config['CHAT_SERVICE_URL']
+        resp = redirect(chat_url)
+        resp.headers.add('token', token)
+        return resp
+
     return render_template('signup.html')
+
 
 @app.route('/dashboard')
 def dashboard():
     if 'user_id' not in session:
         return redirect(url_for('login'))
+
     user = db.get_user(session['user_id'])
-    return render_template('dashboard.html', user=user)
+    token = request.cookies.get('X-Auth-Token')
+    chat_url = current_app.config['CHAT_SERVICE_URL']
+
+    return render_template('dashboard.html',
+                           user=user,
+                           token=token,
+                           chat_url=chat_url)
+
 
 @app.route('/logout')
 def logout():

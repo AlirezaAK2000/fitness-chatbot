@@ -2,6 +2,7 @@ import sqlite3
 import os
 from typing import Optional, List, Dict, Any
 from db.create_database import create_database, DB_PATH, insert_dummy_data
+import datetime
 
 class FitnessDB:
     def __init__(self, db_path: str = DB_PATH, use_dummy_data = True):
@@ -15,6 +16,36 @@ class FitnessDB:
         conn = sqlite3.connect(self.db_path)
         conn.row_factory = sqlite3.Row
         return conn
+
+
+    def set_auth_token(self, user_id: int, token: str) -> bool:
+        """
+        Save a new auth token and timestamp into the users table.
+        """
+        conn = self._connect()
+        cursor = conn.cursor()
+        cursor.execute("""
+            UPDATE users
+               SET auth_token = ?
+             WHERE user_id = ?
+        """, (token, user_id))
+        conn.commit()
+        updated = cursor.rowcount > 0
+        conn.close()
+        return updated
+
+
+    def get_user_by_token(self, token: str) -> Optional[Dict[str, Any]]:
+        """
+        (Optional) Look up a user by their auth token.
+        """
+        conn = self._connect()
+        cursor = conn.cursor()
+        cursor.execute("SELECT * FROM users WHERE auth_token = ?", (token,))
+        row = cursor.fetchone()
+        conn.close()
+        return dict(row) if row else None
+
 
     def create_user(self, email: str, password_hash: str, first_name: Optional[str] = None,
                     last_name: Optional[str] = None, date_of_birth: Optional[str] = None,

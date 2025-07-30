@@ -1,7 +1,12 @@
 {% extends 'base.html' %}
 {% block title %}Dashboard{% endblock %}
 {% block content %}
-<h2>Welcome, {{ user.first_name or user.email }}!</h2>
-<p>Your fitness goals: {{ user.fitness_goals or 'Not set' }}</p>
-<a href="{{ url_for('logout') }}">Log Out</a>
+  <h2>Welcome, {{ user.first_name or user.email }}!</h2>
+  <p>Your fitness goals: {{ user.fitness_goals or 'Not set' }}</p>
+
+  <p>
+    <a href="{{ url_for('logout') }}">Log Out</a>
+    <!-- external chat link with token appended -->
+    <a href="{{ chat_url }}?token={{ token }}">Go to Chat</a>
+  </p>
 {% endblock %}
