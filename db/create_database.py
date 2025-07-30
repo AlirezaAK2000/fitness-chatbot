@@ -1,7 +1,6 @@
 from werkzeug.security import generate_password_hash
 import sqlite3
 import json
-import secrets
 
 DB_PATH = 'fitness.db'
 
@@ -26,7 +25,6 @@ def create_database(db_path: str = DB_PATH):
         dietary_pref    TEXT,
         fitness_goals   TEXT,
         designed_plan   TEXT,              -- optional chatbot‐generated plan
-        auth_token      TEXT UNIQUE,
         created_at      DATETIME DEFAULT CURRENT_TIMESTAMP,
         updated_at      DATETIME DEFAULT CURRENT_TIMESTAMP
     );
@@ -73,6 +71,3 @@ def insert_dummy_data(db_mg):
 
         for l in log:
             db_mg.create_progress_entry(i + 1 , l)
-
-        token = secrets.token_urlsafe(32)
-        db_mg.set_auth_token(i + 1 , token)

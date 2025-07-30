@@ -5,7 +5,7 @@ import secrets
 
 app = Flask(__name__)
 app.secret_key = 'sadjknaskdnkjasndkasjndkj'
-app.config['CHAT_SERVICE_URL'] = 'http://localhost:8000/auth/header'
+app.config['CHAT_SERVICE_URL'] = 'http://localhost:8000'
 
 
 db = FitnessDB()
@@ -23,19 +23,8 @@ def login():
         password = request.form['password']
         user = db.get_user_by_email(email)
         if user and check_password_hash(user['password_hash'], password):
-            # generate a new token
-            token = secrets.token_urlsafe(32)
-
-            # save it in the DB
-            db.set_auth_token(user['user_id'], token)
-
-            # you can still set the session if you like
             session['user_id'] = user['user_id']
-
-            # return JSON for API clients, or embed in template
-            chat_url = current_app.config['CHAT_SERVICE_URL']
-            resp = redirect(chat_url)
-            resp.headers.add('token', token)
+            resp = redirect(url_for('dashboard'))
             return resp
 
         flash('Invalid credentials.', 'error')
@@ -68,21 +57,9 @@ def signup():
             fitness_goals=request.form.get('fitness_goals')
         )
 
-        # 2) generate & save a new auth token
-        token = secrets.token_urlsafe(32)
-        db.set_auth_token(user_id, token)
-
-        # 3) log them into the session
         session['user_id'] = user_id
         flash('Account created and logged in.', 'success')
-
-        # — OPTION A: return JSON (for API clients) —
-        # return {'message': 'Signed up', 'token': token}, 201
-
-        # — OPTION B: set it as an HTTP‑only cookie (for browser clients) —
-        chat_url = current_app.config['CHAT_SERVICE_URL']
-        resp = redirect(chat_url)
-        resp.headers.add('token', token)
+        resp = redirect(url_for('dashboard'))
         return resp
 
     return render_template('signup.html')
@@ -94,12 +71,10 @@ def dashboard():
         return redirect(url_for('login'))
 
     user = db.get_user(session['user_id'])
-    token = request.cookies.get('X-Auth-Token')
     chat_url = current_app.config['CHAT_SERVICE_URL']
 
     return render_template('dashboard.html',
                            user=user,
-                           token=token,
                            chat_url=chat_url)
 
 
