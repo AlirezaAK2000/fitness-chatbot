@@ -1,6 +1,7 @@
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import generate_password_hash
 import sqlite3
 import json
+
 
 DB_PATH = 'fitness.db'
 
@@ -34,19 +35,9 @@ def create_database(db_path: str = DB_PATH):
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS user_progress (
         progress_id   INTEGER PRIMARY KEY AUTOINCREMENT,
-        user_id       INTEGER NOT NULL
-                        REFERENCES users(user_id) ON DELETE CASCADE,
-        log_date      DATE    NOT NULL,
-        entry_type    TEXT    NOT NULL
-                        CHECK(entry_type IN (
-                            'weight_check',
-                            'meal',
-                            'workout',
-                            'note'
-                        )),
+        user_id       INTEGER NOT NULL REFERENCES users(user_id) ON DELETE CASCADE,
         details       TEXT    NOT NULL,
-        created_at    DATETIME DEFAULT CURRENT_TIMESTAMP,
-        UNIQUE(user_id, log_date, entry_type)
+        created_at    DATETIME DEFAULT CURRENT_TIMESTAMP
     );
     """)
 
@@ -60,8 +51,11 @@ def insert_dummy_data(db_mg):
 
     with open("data/users.json", 'r') as f:
         users = json.loads(json.load(f))
+    with open("data/logs.json", 'r') as f:
+        logs = json.load(f)
 
-    for user in users['users']:
+
+    for i, (user, log) in enumerate(zip(users['users'], logs)):
         db_mg.create_user(
             email = user['email'],
             password_hash = generate_password_hash(user['password']),
@@ -75,3 +69,6 @@ def insert_dummy_data(db_mg):
             dietary_pref = user['dietary_pref'],
             fitness_goals = user['fitness_goals'],
         )
+
+        for l in log:
+            db_mg.create_progress_entry(i + 1 , l)

@@ -5,7 +5,6 @@ from db.create_database import create_database, DB_PATH, insert_dummy_data
 
 class FitnessDB:
     def __init__(self, db_path: str = DB_PATH, use_dummy_data = True):
-        # Ensure database file exists; create schema if not
         self.db_path = db_path
         if not os.path.exists(self.db_path):
             create_database(self.db_path)
@@ -85,16 +84,16 @@ class FitnessDB:
     # Progress Log CRUD Operations
     # -------------------------
 
-    def create_progress_entry(self, user_id: int, log_date: str, entry_type: str, details: str) -> int:
+    def create_progress_entry(self, user_id: int, details: str) -> int:
         """
         Inserts a new progress entry and returns the new progress_id.
         """
         conn = self._connect()
         cursor = conn.cursor()
         cursor.execute("""
-            INSERT INTO user_progress (user_id, log_date, entry_type, details)
-            VALUES (?, ?, ?, ?)
-        """, (user_id, log_date, entry_type, details))
+            INSERT INTO user_progress (user_id, details)
+            VALUES (?, ?)
+        """, (user_id, details))
         conn.commit()
         progress_id = cursor.lastrowid
         conn.close()
@@ -105,9 +104,8 @@ class FitnessDB:
         Retrieves all progress entries for a user.
         """
         conn = self._connect()
-        conn.row_factory = sqlite3.Row
         cursor = conn.cursor()
-        cursor.execute("SELECT * FROM user_progress WHERE user_id = ? ORDER BY log_date DESC", (user_id,))
+        cursor.execute("SELECT * FROM user_progress WHERE user_id = ? ORDER BY created_at DESC", (user_id,))
         rows = cursor.fetchall()
         conn.close()
         return [dict(row) for row in rows]
@@ -144,16 +142,15 @@ class FitnessDB:
 
     def get_last_progress(self, user_id: int, num_logs = 3) -> List[Dict[str, Any]]:
         """
-        Retrieves the last `num_logs` progress entries for a given user, ordered by log_date descending.
+        Retrieves the last `num_logs` progress entries for a given user.
         """
-        conn = self._connect
-        conn.row_factory = sqlite3.Row
+        conn = self._connect()
         cursor = conn.cursor()
         cursor.execute("""
-            SELECT progress_id, user_id, log_date, entry_type, details, created_at
+            SELECT details, created_at
             FROM user_progress
             WHERE user_id = ?
-            ORDER BY log_date DESC, created_at DESC
+            ORDER BY created_at DESC
             LIMIT ?
         """, (user_id, num_logs))
         rows = cursor.fetchall()
