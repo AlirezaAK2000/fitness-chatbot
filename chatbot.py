@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from langchain.schema.runnable.config import RunnableConfig
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
-from agents.planner import PlannerGraph
+from agents.main import MainGraph
 from db.db_manager import FitnessDB
 from werkzeug.security import check_password_hash
 # from langchain_openai import ChatOpenAI
@@ -19,7 +19,7 @@ llm = ChatGoogleGenerativeAI(
 )
 
 db_manager = FitnessDB()
-graph = PlannerGraph(llm, db_manager).compile()
+graph = MainGraph(llm, db_manager).compile()
 
 
 @cl.password_auth_callback

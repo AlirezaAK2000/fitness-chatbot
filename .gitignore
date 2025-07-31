@@ -8,3 +8,5 @@ chainlit.md
 .env
 *.sqlite3
 fitness.db
+.files
+.DS_Store

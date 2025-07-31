@@ -2,18 +2,19 @@ from langchain_core.messages import SystemMessage, HumanMessage
 from langgraph.graph import END, START, StateGraph
 from agents.graph import Graph
 from db.db_manager import FitnessDB
-from agents.state_schema import UserMessages
+from agents.schema import UserMessages
 from langgraph.prebuilt import ToolNode
 import json
-from agents.summarizer import SummarizerGraph
+from agents.summarizer import LogSummarizerGraph
 from agents.prompt import (
     FITNESS_SYSTEM_PROMPT,
     DIET_PLANNING_SYSTEM_PROMPT,
     WEBSEARCH_PROMPT,
-    SUMMARY_PROMPT
+    LOG_SUMMARY_PROMPT
 )
 from agents.tools import get_search_web_tool
 from utils import log_function_call
+from agents.enums import PlannerType
 
 class PlannerGraph(Graph):
     
@@ -21,14 +22,14 @@ class PlannerGraph(Graph):
         self,
         llm,
         db_manager: FitnessDB,
-        planner_type = 'fitness',
+        planner_type:PlannerType = PlannerType.FITNESS,
         web_num_results = 5
     ):
         super().__init__(llm, UserMessages)
         self.db_manager = db_manager
-        self.planner_sys_prompt = FITNESS_SYSTEM_PROMPT if planner_type == 'fitness' else DIET_PLANNING_SYSTEM_PROMPT
+        self.planner_sys_prompt = FITNESS_SYSTEM_PROMPT if planner_type == PlannerType.FITNESS else DIET_PLANNING_SYSTEM_PROMPT
         self.search_web_prompt = WEBSEARCH_PROMPT
-        self.summarizer = SummarizerGraph(llm, db_manager, SUMMARY_PROMPT).compile() 
+        self.summarizer = LogSummarizerGraph(llm, db_manager, LOG_SUMMARY_PROMPT).compile() 
         self.search_web = get_search_web_tool(num_results=web_num_results)
         self.planner_type = planner_type
     
@@ -48,14 +49,14 @@ class PlannerGraph(Graph):
             user_info = user_info,
         )
         prompt += self._check_summary(state)
-        sys_prompt = [
-            HumanMessage(
+        messages = [
+            SystemMessage(
                 content=prompt
             )
-        ]
+        ] + state['messages']
         llm_with_tool = self.llm.bind_tools([self.search_web])
-        response = llm_with_tool.invoke(sys_prompt)
-        return {"messages": response}
+        response = llm_with_tool.invoke(messages )
+        return {"messages": [response]}
     
 
     @log_function_call
@@ -69,10 +70,10 @@ class PlannerGraph(Graph):
         prompt += self._get_context_prompt(selected_context)
         
         messages = [
-             HumanMessage(
+             SystemMessage(
                 content = prompt
             )
-        ]
+        ] + state['messages']
         response = self.llm.invoke(messages)
         return {'messages': response}
     
@@ -88,7 +89,7 @@ class PlannerGraph(Graph):
         graph_builder.add_edge("node_search_web", "node_search_web_tool")
         graph_builder.add_edge("node_search_web_tool", "node_plan")
         graph_builder.add_edge("node_plan", END)
-        self.graph_compiled = graph_builder.compile()
+        self.graph_compiled = graph_builder.compile(checkpointer=False)
         return self.graph_compiled
 
 
