@@ -10,3 +10,4 @@ chainlit.md
 fitness.db
 .files
 .DS_Store
+tests.ipynb

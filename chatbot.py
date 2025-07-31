@@ -10,6 +10,40 @@ from db.db_manager import FitnessDB
 from werkzeug.security import check_password_hash
 # from langchain_openai import ChatOpenAI
 
+WELCOME_MESSAGE = """
+**👋 Welcome to Your Personal Fitness Assistant!**
+
+Hello {first_name},
+I’m here to help you achieve your health and fitness goals with smart, personalized guidance. Here’s what I can do for you:
+
+### ✅ **1. Create a Custom Workout Plan**
+- Tailored to your **goals** (weight loss, muscle gain, endurance, etc.)
+- Adjusted for your **fitness level**, available equipment, and schedule
+- Includes **warm-up, main workout, and cool-down** with clear instructions and benefits
+
+### ✅ **2. Design a Personalized Diet Plan**
+- Matches your **dietary preferences** (vegetarian, gluten-free, etc.)
+- Aligned with your **fitness goals and calorie needs**
+- Provides balanced meals, snacks, and **macro breakdowns** (optional)
+- Simple, practical, and easy to follow
+
+### ✅ **3. Log and Track Your Progress**
+- Share your workout or diet details (e.g., “July 10: 5x5 squats at 85 kg, 20-min run”)
+- I’ll save your progress so you can **stay on track and review later**
+- Can summarize your logs into **clear progress reports**
+
+---
+
+💡 **How to Get Started:**
+- To **create a workout plan**, tell me your goal (e.g., “I want to build strength and train 4 days/week”)
+- To **design a diet plan**, share your preferences (e.g., “I’m vegetarian and want to lose weight”)
+- To **log progress**, just type your recent workout or meal details (e.g., “July 15: 30-min run, felt great”)
+
+I’m here to keep you consistent, informed, and motivated!  
+**What would you like to do first — workout plan, diet plan, or log your progress?**
+
+"""
+
 load_dotenv()
 
 
@@ -39,7 +73,7 @@ async def on_chat_start():
     # Set the graph as the runnable model for the session
     cl.user_session.set("runnable", graph)
     app_user = cl.user_session.get("user")
-    await cl.Message(f"Hello {app_user.metadata['first_name']}").send()
+    await cl.Message(WELCOME_MESSAGE.format(first_name = app_user.metadata['first_name'])).send()
 
 
 @cl.on_message
