@@ -10,11 +10,13 @@ from agents.prompt import (
     FITNESS_SYSTEM_PROMPT,
     DIET_PLANNING_SYSTEM_PROMPT,
     WEBSEARCH_PROMPT,
-    LOG_SUMMARY_PROMPT
+    LOG_SUMMARY_PROMPT , 
+    RAG_RETRIEVAL_PROMPT
 )
-from agents.tools import get_search_web_tool
+from agents.tools import get_search_web_tool , get_search_books_tool
 from utils import log_function_call
 from agents.enums import PlannerType
+from db.retrievers import WebRetriever,  DocumentRetriever
 
 class PlannerGraph(Graph):
     
@@ -29,8 +31,11 @@ class PlannerGraph(Graph):
         self.db_manager = db_manager
         self.planner_sys_prompt = FITNESS_SYSTEM_PROMPT if planner_type == PlannerType.FITNESS else DIET_PLANNING_SYSTEM_PROMPT
         self.search_web_prompt = WEBSEARCH_PROMPT
+        self.search_doc_prompt = RAG_RETRIEVAL_PROMPT
         self.summarizer = LogSummarizerGraph(llm, db_manager, LOG_SUMMARY_PROMPT).compile() 
         self.search_web = get_search_web_tool(num_results=web_num_results)
+        self.book_retriever = DocumentRetriever(books=["/home/yoosef/Desktop/llm_project/fitness-chatbot/data/dietry.pdf","/home/yoosef/Desktop/llm_project/fitness-chatbot/data/fitness.pdf"  ])
+        self.search_doc = get_search_books_tool(self.book_retriever)
         self.planner_type = planner_type
     
 
@@ -58,6 +63,21 @@ class PlannerGraph(Graph):
         response = llm_with_tool.invoke(messages )
         return {"messages": [response]}
     
+    @log_function_call
+    def node_search_doc(self, state):
+        user_info = self.db_manager.get_user(state['user_id'])
+        prompt = self.search_doc_prompt.format(
+            user_info = user_info,
+        )
+        prompt += self._check_summary(state)
+        messages = [
+            SystemMessage(
+                content=prompt
+            )
+        ] + state['messages']
+        llm_with_tool = self.llm.bind_tools([self.search_doc])
+        response = llm_with_tool.invoke(messages )
+        return {"messages": [response]}
 
     @log_function_call
     def node_plan(self, state):
@@ -78,16 +98,23 @@ class PlannerGraph(Graph):
         return {'messages': response}
     
     
+    
     def compile(self):
         graph_builder = StateGraph(self.message_class)
         graph_builder.add_node("node_log_summary", self.node_log_summary)
-        graph_builder.add_node("node_search_web", self.node_search_web)
-        graph_builder.add_node("node_search_web_tool", ToolNode([self.search_web]))
+        # graph_builder.add_node("node_search_web", self.node_search_web) ##why did you code it ?
+        # graph_builder.add_node("node_log_summary", self.node_log_summary)
+        # graph_builder.add_node("node_search_web", self.node_search_web)
+        graph_builder.add_node("node_search_doc", self.node_search_doc)
+        # graph_builder.add_node("node_search_web_tool", ToolNode([self.search_web]))
+        graph_builder.add_node("node_search_doc_tool", ToolNode([self.search_doc]))
         graph_builder.add_node("node_plan", self.node_plan)
         graph_builder.add_edge(START, "node_log_summary")
-        graph_builder.add_edge("node_log_summary", "node_search_web")
-        graph_builder.add_edge("node_search_web", "node_search_web_tool")
-        graph_builder.add_edge("node_search_web_tool", "node_plan")
+        # graph_builder.add_edge("node_log_summary", "node_search_web")
+        graph_builder.add_edge("node_log_summary", "node_search_doc")
+        # graph_builder.add_edge("node_search_web", "node_search_web_tool")
+        graph_builder.add_edge("node_search_doc", "node_search_doc_tool")
+        graph_builder.add_edge("node_search_doc_tool", "node_plan")
         graph_builder.add_edge("node_plan", END)
         self.graph_compiled = graph_builder.compile(checkpointer=False)
         return self.graph_compiled
