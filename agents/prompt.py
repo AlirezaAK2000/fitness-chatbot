@@ -93,10 +93,7 @@ Use the available **Fitness** and **Dietary** documents to answer the user's nee
   - Specific interests (e.g., strength training, running, meal planning)
 
 ## Your Task:
-1. **Generate 2–3 targeted queries** that can retrieve the most relevant information from the two internal documents: one focused on **dietary guidance**, and the other on **fitness training**.
-2. Use those queries to retrieve and summarize **concise, practical, evidence-based advice** tailored to the user.
-3. Label content based on its source: either `[From Fitness Doc]` or `[From Dietary Doc]`.
-
+1. **Generate 2–3 targeted queries** that can retrieve the most relevant information 
 ## User Info:
 {user_info}
 """

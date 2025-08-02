@@ -16,7 +16,7 @@ from agents.prompt import (
 from agents.tools import get_search_web_tool , get_search_books_tool
 from utils import log_function_call
 from agents.enums import PlannerType
-from db.retrievers import WebRetriever,  DocumentRetriever
+from db.retrievers import DocumentRetriever
 
 class PlannerGraph(Graph):
     
@@ -24,19 +24,31 @@ class PlannerGraph(Graph):
         self,
         llm,
         db_manager: FitnessDB,
+        book_retriever: DocumentRetriever,
         planner_type:PlannerType = PlannerType.FITNESS,
-        web_num_results = 5
+        num_results = 3,
+        # use_web_search = False
     ):
         super().__init__(llm, UserMessages)
         self.db_manager = db_manager
         self.planner_sys_prompt = FITNESS_SYSTEM_PROMPT if planner_type == PlannerType.FITNESS else DIET_PLANNING_SYSTEM_PROMPT
         self.search_web_prompt = WEBSEARCH_PROMPT
         self.search_doc_prompt = RAG_RETRIEVAL_PROMPT
+        
         self.summarizer = LogSummarizerGraph(llm, db_manager, LOG_SUMMARY_PROMPT).compile() 
-        self.search_web = get_search_web_tool(num_results=web_num_results)
-        self.book_retriever = DocumentRetriever(books=["/home/yoosef/Desktop/llm_project/fitness-chatbot/data/dietry.pdf","/home/yoosef/Desktop/llm_project/fitness-chatbot/data/fitness.pdf"  ])
-        self.search_doc = get_search_books_tool(self.book_retriever)
+        
+        self.book_retriever = book_retriever
+        self.search_doc = get_search_books_tool(
+            self.book_retriever,
+            type_doc = 'fitness' if planner_type == PlannerType.FITNESS else 'dietry',
+            num_results = num_results
+         )
         self.planner_type = planner_type
+
+        # self.use_web_search = use_web_search
+        # if self.use_web_search:
+        #     self.search_web = get_search_web_tool(num_results = num_results)
+
     
 
     @log_function_call
@@ -63,6 +75,7 @@ class PlannerGraph(Graph):
         response = llm_with_tool.invoke(messages )
         return {"messages": [response]}
     
+
     @log_function_call
     def node_search_doc(self, state):
         user_info = self.db_manager.get_user(state['user_id'])
@@ -79,14 +92,20 @@ class PlannerGraph(Graph):
         response = llm_with_tool.invoke(messages )
         return {"messages": [response]}
 
+
     @log_function_call
     def node_plan(self, state):
         
         user_info = self.db_manager.get_user(state['user_id'])
         prompt = self.planner_sys_prompt.format(user_info = user_info)
         prompt += self._check_summary(state)
+        print(state['messages'][-1].content)
         contexts = json.loads(state['messages'][-1].content)
         selected_context = self._get_top_contexts(contexts)
+
+        # if self.use_web_search:
+        #     web_contexts = json.loads(state['messages'][-3].content)
+        #     selected_context += self._get_top_contexts(web_contexts)
         prompt += self._get_context_prompt(selected_context)
         
         messages = [
@@ -98,20 +117,19 @@ class PlannerGraph(Graph):
         return {'messages': response}
     
     
-    
     def compile(self):
         graph_builder = StateGraph(self.message_class)
         graph_builder.add_node("node_log_summary", self.node_log_summary)
-        # graph_builder.add_node("node_search_web", self.node_search_web) ##why did you code it ?
-        # graph_builder.add_node("node_log_summary", self.node_log_summary)
-        # graph_builder.add_node("node_search_web", self.node_search_web)
         graph_builder.add_node("node_search_doc", self.node_search_doc)
-        # graph_builder.add_node("node_search_web_tool", ToolNode([self.search_web]))
         graph_builder.add_node("node_search_doc_tool", ToolNode([self.search_doc]))
         graph_builder.add_node("node_plan", self.node_plan)
+        
+        # graph_builder.add_node("node_search_web", self.node_search_web) 
+        # graph_builder.add_node("node_search_web_tool", ToolNode([self.search_web]))
+
         graph_builder.add_edge(START, "node_log_summary")
-        # graph_builder.add_edge("node_log_summary", "node_search_web")
         graph_builder.add_edge("node_log_summary", "node_search_doc")
+        # graph_builder.add_edge("node_log_summary", "node_search_web")
         # graph_builder.add_edge("node_search_web", "node_search_web_tool")
         graph_builder.add_edge("node_search_doc", "node_search_doc_tool")
         graph_builder.add_edge("node_search_doc_tool", "node_plan")
@@ -136,10 +154,15 @@ class PlannerGraph(Graph):
     def _get_top_contexts(self, contexts, top_n = 5):
         if not contexts:
             return []
-        print(contexts[0].keys())
+
+        selected_contexts = set()
         sorted_contexts = sorted(contexts, key = lambda x: x['score'])
         sorted_contexts = [c['content'] for c in sorted_contexts]
-        return sorted_contexts[-min(top_n, len(sorted_contexts)):]
+        for context in sorted_contexts:
+            selected_contexts.add(context)
+            if len(selected_contexts) == top_n:
+                break
+        return list(selected_contexts)
     
     
     def _get_context_prompt(self, contexts):

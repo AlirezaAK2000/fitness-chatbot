@@ -11,3 +11,5 @@ fitness.db
 .files
 .DS_Store
 tests.ipynb
+*.pdf
+.lancedb

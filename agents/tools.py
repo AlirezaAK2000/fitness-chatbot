@@ -16,17 +16,21 @@ def get_search_web_tool(num_results = 5):
 
 
 
-def get_search_books_tool(book_retriever: DocumentRetriever):
+def get_search_books_tool(document_retriever: DocumentRetriever, type_doc: str, num_results = 5):
 
     def search_books(query: str):
-        """Searches the books inside the database and returns the top 5 most related resutls.
+        """Searches the documents inside the database and returns the top most related resutls.
         Args:
             query: The query to search for.
         """
         
-        results = book_retriever.search(query)
-        results = [result['text'] for result in results]
-        print(f"****************\nretrieved text : \n results \n*********************")
+        results = document_retriever.search(query, type_doc, num_results)
+        results = [
+            {
+                "content": result['text'],
+                "score": result['_relevance_score']
+            } for result in results
+        ]
         return results
     
     return search_books

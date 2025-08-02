@@ -14,6 +14,7 @@ from agents.prompt import (
 )
 from copy import deepcopy
 from langgraph.checkpoint.memory import MemorySaver
+from db.retrievers import DocumentRetriever
 
 
 class MainGraph(Graph):
@@ -25,8 +26,9 @@ class MainGraph(Graph):
     ):
         super().__init__(llm, UserMessages)
         self.db_manager = db_manager
-        self.fitness_planner = PlannerGraph(llm, db_manager, planner_type = PlannerType.FITNESS).compile()
-        self.diet_planner = PlannerGraph(llm, db_manager, planner_type = PlannerType.DIET).compile()
+        book_retriever = DocumentRetriever(books_dir= 'data/')
+        self.fitness_planner = PlannerGraph(llm, db_manager, book_retriever, planner_type = PlannerType.FITNESS).compile()
+        self.diet_planner = PlannerGraph(llm, db_manager, book_retriever, planner_type = PlannerType.DIET).compile()
         self.summarizer = BaseSummarizer(llm).compile()
         self.last_messages = last_messages
 
