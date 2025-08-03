@@ -90,15 +90,15 @@ class MainGraph(Graph):
         response = planner.invoke(planner_state)
 
         plan = response['messages'][-1]
-        summary_response = self.summarizer.invoke({"messages": [HumanMessage(content=plan.content)]})
-        plan_summarized = summary_response['messages'][-1].content
+        # summary_response = self.summarizer.invoke({"messages": [HumanMessage(content=plan.content)]})
+        # plan_summarized = summary_response['messages'][-1].content
         
         output = dict()
         output['messages'] = [plan]
-        if state['task_type'] == TaskType.FITNESS:
-            output['summarized_fitness_plan'] = plan_summarized
-        else:
-            output['summarized_diet_plan'] = plan_summarized
+        # if state['task_type'] == TaskType.FITNESS:
+        #     output['summarized_fitness_plan'] = plan_summarized
+        # else:
+        #     output['summarized_diet_plan'] = plan_summarized
         return output
 
 

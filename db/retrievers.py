@@ -15,7 +15,7 @@ from tqdm import tqdm
 
 load_dotenv()
 
-embedding_model = get_registry().get("sentence-transformers").create(name = "BAAI/bge-small-en-v1.5", device = "mps")
+embedding_model = get_registry().get("sentence-transformers").create(name = "BAAI/bge-small-en-v1.5", device = "cuda")
 
 class BookChunk(LanceModel):
     text: str = embedding_model.SourceField()
