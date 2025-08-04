@@ -22,13 +22,18 @@ class MainGraph(Graph):
             self,
             llm: ChatGoogleGenerativeAI,
             db_manager: FitnessDB,
-            last_messages: int = 3
+            last_messages: int = 3,
+            use_rag_data: bool = True
     ):
         super().__init__(llm, UserMessages)
         self.db_manager = db_manager
         book_retriever = DocumentRetriever(books_dir= 'data/')
-        self.fitness_planner = PlannerGraph(llm, db_manager, book_retriever, planner_type = PlannerType.FITNESS).compile()
-        self.diet_planner = PlannerGraph(llm, db_manager, book_retriever, planner_type = PlannerType.DIET).compile()
+        self.fitness_planner = PlannerGraph(
+            llm, db_manager, book_retriever, planner_type = PlannerType.FITNESS, use_rag_data=use_rag_data
+            ).compile()
+        self.diet_planner = PlannerGraph(
+            llm, db_manager, book_retriever, planner_type = PlannerType.DIET, use_rag_data=use_rag_data
+            ).compile()
         self.summarizer = BaseSummarizer(llm).compile()
         self.last_messages = last_messages
 

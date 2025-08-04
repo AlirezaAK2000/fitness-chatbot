@@ -27,6 +27,7 @@ class PlannerGraph(Graph):
         book_retriever: DocumentRetriever,
         planner_type:PlannerType = PlannerType.FITNESS,
         num_results = 3,
+        use_rag_data = True
         # use_web_search = False
     ):
         super().__init__(llm, UserMessages)
@@ -34,6 +35,7 @@ class PlannerGraph(Graph):
         self.planner_sys_prompt = FITNESS_SYSTEM_PROMPT if planner_type == PlannerType.FITNESS else DIET_PLANNING_SYSTEM_PROMPT
         self.search_web_prompt = WEBSEARCH_PROMPT
         self.search_doc_prompt = RAG_RETRIEVAL_PROMPT
+        self.use_rag_data = use_rag_data
         
         self.summarizer = LogSummarizerGraph(llm, db_manager, LOG_SUMMARY_PROMPT).compile() 
         
@@ -99,14 +101,15 @@ class PlannerGraph(Graph):
         user_info = self.db_manager.get_user(state['user_id'])
         prompt = self.planner_sys_prompt.format(user_info = user_info)
         prompt += self._check_summary(state)
-        print(state['messages'][-1].content)
-        contexts = json.loads(state['messages'][-1].content)
-        selected_context = self._get_top_contexts(contexts)
+
+        if self.use_rag_data:
+            contexts = json.loads(state['messages'][-1].content)
+            selected_context = self._get_top_contexts(contexts)
 
         # if self.use_web_search:
         #     web_contexts = json.loads(state['messages'][-3].content)
         #     selected_context += self._get_top_contexts(web_contexts)
-        prompt += self._get_context_prompt(selected_context)
+            prompt += self._get_context_prompt(selected_context)
         
         messages = [
              SystemMessage(
@@ -120,21 +123,30 @@ class PlannerGraph(Graph):
     def compile(self):
         graph_builder = StateGraph(self.message_class)
         graph_builder.add_node("node_log_summary", self.node_log_summary)
-        graph_builder.add_node("node_search_doc", self.node_search_doc)
-        graph_builder.add_node("node_search_doc_tool", ToolNode([self.search_doc]))
+
+        if self.use_rag_data:
+            graph_builder.add_node("node_search_doc", self.node_search_doc)
+            graph_builder.add_node("node_search_doc_tool", ToolNode([self.search_doc]))
+        
         graph_builder.add_node("node_plan", self.node_plan)
         
         # graph_builder.add_node("node_search_web", self.node_search_web) 
         # graph_builder.add_node("node_search_web_tool", ToolNode([self.search_web]))
 
-        graph_builder.add_edge(START, "node_log_summary")
-        graph_builder.add_edge("node_log_summary", "node_search_doc")
-        # graph_builder.add_edge("node_log_summary", "node_search_web")
-        # graph_builder.add_edge("node_search_web", "node_search_web_tool")
-        graph_builder.add_edge("node_search_doc", "node_search_doc_tool")
-        graph_builder.add_edge("node_search_doc_tool", "node_plan")
-        graph_builder.add_edge("node_plan", END)
-        self.graph_compiled = graph_builder.compile(checkpointer=False)
+        if self.use_rag_data:
+            graph_builder.add_edge(START, "node_log_summary")
+            graph_builder.add_edge("node_log_summary", "node_search_doc")
+            # graph_builder.add_edge("node_log_summary", "node_search_web")
+            # graph_builder.add_edge("node_search_web", "node_search_web_tool")
+            graph_builder.add_edge("node_search_doc", "node_search_doc_tool")
+            graph_builder.add_edge("node_search_doc_tool", "node_plan")
+            graph_builder.add_edge("node_plan", END)
+            self.graph_compiled = graph_builder.compile(checkpointer=False)
+        else:
+            graph_builder.add_edge(START, "node_log_summary")
+            graph_builder.add_edge("node_log_summary", "node_plan")
+            graph_builder.add_edge("node_plan", END)
+            self.graph_compiled = graph_builder.compile(checkpointer=False)
         return self.graph_compiled
 
 
