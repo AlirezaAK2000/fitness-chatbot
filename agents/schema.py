@@ -9,6 +9,7 @@ class UserMessages(MessagesState):
     summarized_fitness_plan: str
     summarized_diet_plan: str
     task_type: TaskType
+    contexts: List[str]
 
 
 class Task(BaseModel):

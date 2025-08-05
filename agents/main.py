@@ -100,6 +100,7 @@ class MainGraph(Graph):
         
         output = dict()
         output['messages'] = [plan]
+        output['contexts'] = response.get('contexts', [])
         # if state['task_type'] == TaskType.FITNESS:
         #     output['summarized_fitness_plan'] = plan_summarized
         # else:

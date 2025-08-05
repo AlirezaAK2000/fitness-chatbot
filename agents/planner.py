@@ -101,7 +101,7 @@ class PlannerGraph(Graph):
         user_info = self.db_manager.get_user(state['user_id'])
         prompt = self.planner_sys_prompt.format(user_info = user_info)
         prompt += self._check_summary(state)
-
+        out = dict()
         if self.use_rag_data:
             contexts = json.loads(state['messages'][-1].content)
             selected_context = self._get_top_contexts(contexts)
@@ -110,6 +110,7 @@ class PlannerGraph(Graph):
         #     web_contexts = json.loads(state['messages'][-3].content)
         #     selected_context += self._get_top_contexts(web_contexts)
             prompt += self._get_context_prompt(selected_context)
+            out['contexts'] = selected_context
         
         messages = [
              SystemMessage(
@@ -117,7 +118,8 @@ class PlannerGraph(Graph):
             )
         ] + state['messages']
         response = self.llm.invoke(messages)
-        return {'messages': response}
+        out['messages'] = [response]
+        return out
     
     
     def compile(self):
