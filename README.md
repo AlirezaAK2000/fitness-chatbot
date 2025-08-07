@@ -1,13 +1,16 @@
+![Fitness-Chatbot Logo](img/logo.png)
+
 # Fitness‑Chatbot
 
 A fitness planning chatbot designed to assist users in creating, evaluating, and managing personalized workout routines.
+Fitness-Chatbot is an intelligent conversational agent designed to help users plan, track, and refine personalized workout routines. By leveraging LLMs, it can interact naturally, assess progress, and adapt workout plans over time.
 
 ---
 
 ## Features
 
 - Allows users to interactively create customized fitness plans.
-- Tracks the user progress.
+- Tracks user progress.
 - Built with modular components for easy extension.
 - Evaluation capabilities via Jupyter notebooks to assess performance (`eval.ipynb`, `rag_eval.ipynb`).
 
@@ -35,7 +38,7 @@ A fitness planning chatbot designed to assist users in creating, evaluating, and
 ## Configuration
 
     Here are the required API keys:
-    - Taviliy 
+    - Tavily 
     - Google API key
     - LLAMA cloud API key 
 
