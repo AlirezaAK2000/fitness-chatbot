@@ -28,7 +28,7 @@ class PlannerGraph(Graph):
         db_manager: FitnessDB,
         book_retriever: DocumentRetriever,
         planner_type:PlannerType = PlannerType.FITNESS,
-        num_results = 3,
+        num_results = 5,
         use_rag_data = True
         # use_web_search = False
     ):
@@ -47,6 +47,7 @@ class PlannerGraph(Graph):
             type_doc = self.planner_type,
             num_results = num_results
          )
+        self.num_results = num_results
         self.planner_type = planner_type
         self.reranker = CrossEncoderReranker(device=os.environ['DEVICE'])
 
@@ -113,7 +114,7 @@ class PlannerGraph(Graph):
             reranked_results = self.reranker.rerank_multivector(search_results, main_query, deduplicate=True).to_pandas().to_dict()
             reranked_results = sorted(reranked_results['text'].items())
             reranked_results = [r[1] for r in reranked_results]
-            selected_context.extend(reranked_results)
+            selected_context.extend(reranked_results[:self.num_results])
 
         # if self.use_web_search:
         #     web_contexts = json.loads(state['messages'][-3].content)
