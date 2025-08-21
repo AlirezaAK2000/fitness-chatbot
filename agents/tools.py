@@ -25,12 +25,12 @@ def get_search_books_tool(document_retriever: DocumentRetriever, type_doc: str, 
         """
         
         results = document_retriever.search(query, type_doc, num_results)
-        results = [
-            {
-                "content": result['text'],
-                "score": result['_relevance_score']
-            } for result in results
-        ]
+        # results = [
+        #     {
+        #         "content": result['text'],
+        #         "score": result['_relevance_score']
+        #     } for result in results
+        # ]
         return results
     
     return search_books

@@ -102,3 +102,6 @@ async def on_message(message: cl.Message):
         if isinstance(msg, AIMessage) and ("summarize" not in metadata.get("langgraph_node", "")):
             await final_answer.stream_token(msg.content)
 
+if __name__ == "__main__":
+    from chainlit.cli import run_chainlit
+    run_chainlit(__file__)

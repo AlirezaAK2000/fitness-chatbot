@@ -17,6 +17,8 @@ from agents.tools import get_search_web_tool , get_search_books_tool
 from utils import log_function_call
 from agents.enums import PlannerType
 from db.retrievers import DocumentRetriever
+from lancedb.rerankers import CrossEncoderReranker
+import os
 
 class PlannerGraph(Graph):
     
@@ -36,16 +38,17 @@ class PlannerGraph(Graph):
         self.search_web_prompt = WEBSEARCH_PROMPT
         self.search_doc_prompt = RAG_RETRIEVAL_PROMPT
         self.use_rag_data = use_rag_data
+        self.planner_type = 'fitness' if planner_type == PlannerType.FITNESS else 'dietry'
         
         self.summarizer = LogSummarizerGraph(llm, db_manager, LOG_SUMMARY_PROMPT).compile() 
-        
         self.book_retriever = book_retriever
         self.search_doc = get_search_books_tool(
             self.book_retriever,
-            type_doc = 'fitness' if planner_type == PlannerType.FITNESS else 'dietry',
+            type_doc = self.planner_type,
             num_results = num_results
          )
         self.planner_type = planner_type
+        self.reranker = CrossEncoderReranker(device=os.environ['DEVICE'])
 
         # self.use_web_search = use_web_search
         # if self.use_web_search:
@@ -102,9 +105,15 @@ class PlannerGraph(Graph):
         prompt = self.planner_sys_prompt.format(user_info = user_info)
         prompt += self._check_summary(state)
         out = dict()
+        selected_context = []
         if self.use_rag_data:
-            contexts = json.loads(state['messages'][-1].content)
-            selected_context = self._get_top_contexts(contexts)
+            search_queries = [call['args']['query'] for call in state['messages'][-1].tool_calls]
+            main_query = state['messages'][-2].content + "\n" + str(user_info)
+            search_results = [self.book_retriever.search(query, self.planner_type.value) for query in search_queries]
+            reranked_results = self.reranker.rerank_multivector(search_results, main_query, deduplicate=True).to_pandas().to_dict()
+            reranked_results = sorted(reranked_results['text'].items())
+            reranked_results = [r[1] for r in reranked_results]
+            selected_context.extend(reranked_results)
 
         # if self.use_web_search:
         #     web_contexts = json.loads(state['messages'][-3].content)
@@ -128,7 +137,7 @@ class PlannerGraph(Graph):
 
         if self.use_rag_data:
             graph_builder.add_node("node_search_doc", self.node_search_doc)
-            graph_builder.add_node("node_search_doc_tool", ToolNode([self.search_doc]))
+            # graph_builder.add_node("node_search_doc_tool", ToolNode([self.search_doc]))
         
         graph_builder.add_node("node_plan", self.node_plan)
         
@@ -140,8 +149,8 @@ class PlannerGraph(Graph):
             graph_builder.add_edge("node_log_summary", "node_search_doc")
             # graph_builder.add_edge("node_log_summary", "node_search_web")
             # graph_builder.add_edge("node_search_web", "node_search_web_tool")
-            graph_builder.add_edge("node_search_doc", "node_search_doc_tool")
-            graph_builder.add_edge("node_search_doc_tool", "node_plan")
+            # graph_builder.add_edge("node_search_doc", "node_search_doc_tool")
+            graph_builder.add_edge("node_search_doc", "node_plan")
             graph_builder.add_edge("node_plan", END)
             self.graph_compiled = graph_builder.compile(checkpointer=False)
         else:

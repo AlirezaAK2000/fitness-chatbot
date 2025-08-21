@@ -1,9 +1,6 @@
 from langchain_community.tools.tavily_search import TavilySearchResults
-from llama_parse import LlamaParse
-from llama_index.core import SimpleDirectoryReader
 import lancedb
 import nest_asyncio
-from langchain_text_splitters import RecursiveCharacterTextSplitter
 from lancedb.pydantic import LanceModel, Vector
 import pandas as pd
 from dotenv import load_dotenv
@@ -12,10 +9,12 @@ from typing import List, Dict
 from lancedb.embeddings import get_registry
 import os
 from tqdm import tqdm
+from unstructured.partition.pdf import partition_pdf
+from collections import Counter
 
 load_dotenv()
 
-embedding_model = get_registry().get("sentence-transformers").create(name = "BAAI/bge-small-en-v1.5", device = "cuda")
+embedding_model = get_registry().get("sentence-transformers").create(name = "BAAI/bge-small-en-v1.5", device = os.environ["DEVICE"])
 
 class BookChunk(LanceModel):
     text: str = embedding_model.SourceField()
@@ -71,49 +70,44 @@ class DocumentRetriever(Retriever):
 
         if BOOK_TABLE_NAME not in db.table_names():
             print("Creating Database =====")
-            parser = LlamaParse(result_type="text" )
             books = self._find_pdfs(books_dir)
-            file_extractor = {".pdf": parser}
-            data_for_parse = SimpleDirectoryReader(input_files=books, file_extractor=file_extractor)
-            documents = data_for_parse.load_data(show_progress=True)
+            documents = []
 
-            text_splitter = RecursiveCharacterTextSplitter(
-                chunk_size=1024,
-                chunk_overlap=64,
-                length_function=len,
-                is_separator_regex=False,
-            )
+            for file in tqdm(books):
+
+                print("processing ", file)
+                chunks = partition_pdf(
+                    filename=file,
+                    strategy="fast",                     
+                    chunking_strategy="by_title",         
+                    max_characters=4000,                  
+                    combine_text_under_n_chars = 1000,
+                )
+                documents.extend([chunk.to_dict() for chunk in chunks])
+                print(f"Exatracted chunks: {len(chunks)}")
+                print("="*30)
 
             pd_data = defaultdict(list)
-            page_number = 0
-            last_doc = None
 
-            for document in documents:
-                file_name = document.metadata["file_name"]
+            for chunk_index, document in enumerate(documents):
+                file_name = document["metadata"]["file_directory"] + '/' + document["metadata"]["filename"]
                 # Infer type based on file name or path
                 if "fitness" in file_name.lower():
                     doc_type = "fitness"
-                elif "dietry" in file_name.lower():
+                elif "diet" in file_name.lower():
                     doc_type = "dietry"
                 else:
                     doc_type = "other"
 
-                if last_doc is None or last_doc != file_name:
-                    page_number = 1
-                    last_doc = file_name
-                else:
-                    page_number += 1
+                pd_data["text"].append(document['text'])
+                pd_data["file_name"].append(file_name)
+                pd_data["page_number"].append(document['metadata']['page_number'])
+                pd_data["chunk_index"].append(chunk_index)
+                pd_data["type_doc"].append(doc_type)
 
-                chunks = text_splitter.split_text(document.text)
-
-                for chunk_index, chunk in enumerate(chunks):
-                    pd_data["text"].append(chunk)
-                    pd_data["file_name"].append(file_name)
-                    pd_data["page_number"].append(page_number)
-                    pd_data["chunk_index"].append(chunk_index)
-                    pd_data["type_doc"].append(doc_type)
-                
-
+            print("Doc Types:")
+            print(Counter(pd_data['type_doc']))
+            
             df = pd.DataFrame(pd_data)
             print(f"There are {len(df)} chunks to be processed.")
 
@@ -123,7 +117,7 @@ class DocumentRetriever(Retriever):
                 schema=BookChunk,
 
             )
-            tbl.create_fts_index('text', use_tantivy=False)
+            # tbl.create_fts_index('text', use_tantivy=False)
             self.tbl = tbl
         else:
             print("table is already created=====")
@@ -132,7 +126,7 @@ class DocumentRetriever(Retriever):
         print("Book Retriever is ready ====")
 
     def search(self, query, type_doc,limit=5) -> List[Dict]:
-        return self.tbl.search(query, query_type="hybrid").limit(limit).where(f'type_doc = "{type_doc}"').to_list()
+        return self.tbl.search(query).with_row_id(True).limit(limit).where(f'type_doc = "{type_doc}"')
 
 
     def _find_pdfs(self, directory):
