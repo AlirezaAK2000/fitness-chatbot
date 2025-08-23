@@ -125,7 +125,7 @@ class DocumentRetriever(Retriever):
 
         print("Book Retriever is ready ====")
 
-    def search(self, query, type_doc,limit=5) -> List[Dict]:
+    def search(self, query, type_doc,limit=10) -> List[Dict]:
         return self.tbl.search(query).with_row_id(True).limit(limit).where(f'type_doc = "{type_doc}"')
 
 

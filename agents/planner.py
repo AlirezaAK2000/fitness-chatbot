@@ -49,7 +49,7 @@ class PlannerGraph(Graph):
          )
         self.num_results = num_results
         self.planner_type = planner_type
-        self.reranker = CrossEncoderReranker(device=os.environ['DEVICE'])
+        self.reranker = CrossEncoderReranker(model_name='BAAI/bge-reranker-base', device=os.environ['DEVICE'])
 
         # self.use_web_search = use_web_search
         # if self.use_web_search:
@@ -109,7 +109,7 @@ class PlannerGraph(Graph):
         selected_context = []
         if self.use_rag_data:
             search_queries = [call['args']['query'] for call in state['messages'][-1].tool_calls]
-            main_query = state['messages'][-2].content + "\n" + str(user_info)
+            main_query = " ".join(search_queries)
             search_results = [self.book_retriever.search(query, self.planner_type.value) for query in search_queries]
             reranked_results = self.reranker.rerank_multivector(search_results, main_query, deduplicate=True).to_pandas().to_dict()
             reranked_results = sorted(reranked_results['text'].items())
