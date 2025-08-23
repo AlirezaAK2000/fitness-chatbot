@@ -1,4 +1,4 @@
-pdf_path,tables,Main Goal,Training Level,Program Duration,Days Per Week,Time Per Workout,Equipment,Author,Description,Target Gender,raw_text,improved_text
+pdf_path,tables,Main Goal,Training Level,Program Duration,Days Per Week,Time Per Workout,Equipment,Author,Description,Target Gender,raw_text,improved_text,improved_tables
 ./samples/back/8weekchestback.pdf,"Monday - Back & Chest
 Exercise Sets Reps
 Workout #1
@@ -150,7 +150,46 @@ Author:  Steve Shaw","Here is your structured weekly workout plan:
 
 ### Overview
 
-This is an 8-week, 4-day per week workout routine designed for beginners with a main goal of building muscle. The program features a specialization in chest and back, with two dedicated days for these muscle groups. One day focuses on heavy compound movements, while the second incorporates rest-pause techniques for increased intensity. The remaining two days are dedicated to a comprehensive leg workout and a session targeting shoulders and arms. Each workout is designed to last approximately 45-60 minutes."
+This is an 8-week, 4-day per week workout routine designed for beginners with a main goal of building muscle. The program features a specialization in chest and back, with two dedicated days for these muscle groups. One day focuses on heavy compound movements, while the second incorporates rest-pause techniques for increased intensity. The remaining two days are dedicated to a comprehensive leg workout and a session targeting shoulders and arms. Each workout is designed to last approximately 45-60 minutes.","### Monday – Back & Chest
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Deadlifts | 3 | 3 | |
+| Bench Press | 3 | 5 | |
+| Pendlay Rows | 3 | 8–10 | |
+| Incline Dumbbell Bench Press | 3 | 8–10 | |
+| One Arm Dumbbell Rows | 2 | 20–25 | |
+| Dips | 3 | AMAP | (As Many As Possible) |
+| Barbell Shrugs | 3 | 12–15 | |
+
+### Thursday – Back & Chest
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Pull Ups or Inverted Rows | 6 | AMAP | Rest–pause, (As Many As Possible) |
+| Machine Chest Press | 6 | 8–12 | Rest–pause |
+| Lat Pull Downs | 6 | 8–12 | Rest–pause |
+| Dumbbell Flye or Pec Dec | 6 | 8–12 | Rest–pause |
+| Dumbbell Shrugs | 6 | 10 | Rest–pause |
+
+### Saturday – Shoulders & Arms
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Seated Overhead Press | 4 | 8–12 | |
+| Upright Row or Seated Dumbbell Press | 3 | 8–12 | |
+| Superset: Side Lateral Raise + Bent Over Reverse Flye | 3 | 10–15 | |
+| Dumbbell Curl | 3 | 8–12 | |
+| Skullcrushers | 3 | 8–12 | |
+| EZ Bar Preacher Curl | 3 | 10–12 | |
+| Cable Tricep Extensions | 3 | 10–12 | |
+
+### Friday – Legs
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Squats | 4 | 6–12 | |
+| Hack Squat or Dumbbell Lunges | 3 | 8–12 | |
+| Leg Extensions or Leg Press | 3 | 12–15 | |
+| Stiff Leg Deadlift | 3 | 8–10 | |
+| Leg Curls | 4 | 12–15 | |
+| Seated Calf Raise | 4 | 12–20 | |"
 ./samples/back/backandshoulderwomen.pdf,"Workout Routine for Women
 Exercise Sets Reps
 Back & Shoulders
@@ -209,7 +248,15 @@ Author:  Holly Blumenberg","Here is your reorganized workout plan:
 
 ### Overview
 
-This workout plan is designed for beginners with a main goal of building muscle, specifically focusing on back and shoulder development and strength. It is a 6-week program intended to be performed 2 days per week, with each session lasting 45-60 minutes. The provided routine details one of these two weekly sessions, focusing on the upper body. Equipment required includes bodyweight and dumbbells."
+This workout plan is designed for beginners with a main goal of building muscle, specifically focusing on back and shoulder development and strength. It is a 6-week program intended to be performed 2 days per week, with each session lasting 45-60 minutes. The provided routine details one of these two weekly sessions, focusing on the upper body. Equipment required includes bodyweight and dumbbells.","### Back & Shoulders
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dumbbell Shoulder Press | 3 | 12 | |
+| Dumbbell Upright Row | 3 | 12 | |
+| Bent Over Dumbbell Row | 3 | 12 | |
+| Side Lateral Raise | 3 | 6–10 | |
+| Push Ups | 3 | AMAP | (As Many As Possible) |
+| Pull Ups | 3 | AMAP | (As Many As Possible) |"
 ./samples/back/cobraworkout.pdf,"Monday: Super Thick Workout
 Exercise Sets Reps
 Deadlift 5 3
@@ -323,7 +370,22 @@ Author:  Coach Dustin Myers","Here is your reorganized workout plan:
 
 ### Overview
 
-This is a 2-day per week workout split, heavily focused on back development. Monday targets overall back strength and thickness with compound movements like deadlifts and various rows, incorporating supersets and trisets for intensity. Thursday is dedicated to high-volume lat work, aiming for width and detail, utilizing specific rep schemes to maximize muscle fatigue and growth. The plan emphasizes a mix of strength, hypertrophy, and endurance, particularly for the posterior chain and lats."
+This is a 2-day per week workout split, heavily focused on back development. Monday targets overall back strength and thickness with compound movements like deadlifts and various rows, incorporating supersets and trisets for intensity. Thursday is dedicated to high-volume lat work, aiming for width and detail, utilizing specific rep schemes to maximize muscle fatigue and growth. The plan emphasizes a mix of strength, hypertrophy, and endurance, particularly for the posterior chain and lats.","### Monday: Super Thick Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Deadlift | 5 | 3 | |
+| Superset: Rack Pulls + Weighted V-Bar Pull Ups | 5 | | Rack Pulls: 3 reps, Weighted V-Bar Pull Ups: 5 reps |
+| T-Bar Row | 5 | 10, 8, 5, 5, 3 | |
+| Triset: Iso-Dumbbell Rows + Standing Dumbbell Row + Farmer’s Walk | 3 | | Iso-Dumbbell Rows: 6 Each Arm (Pause at Top); Standing Dumbbell Row: 5 Each Side; Farmer’s Walk: 100 Ft |
+| Reverse Hyperextension | 3 | 10 | No Weight, Pause at Top |
+
+### Thursday: Airplane Wing “Lat Attack”
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Superset: Wide Grip Lat Pulldowns + Seated Row | 10 | 10, 20 | Lower Pulldowns by 1 rep and Seated Rows by 2 reps after each set (e.g., 10 & 20, 9 & 18, 8 & 16) |
+| Superset: Barbell Row + Straight Arm Pulldowns | 4 | 5, 8 | |
+| Superset: Wide Grip Pull Ups + Barbell Shrugs | 10 | 10 | For Pull Ups, alter rep count if unable to perform 10 strict reps |
+| Barbell Rollouts | 1 | 50 | |"
 ./samples/begineer/12weekfullbodyworkoutroutineforbeginners.pdf,"Weeks 1-3: Total Body Circuit Workout
 During the first three weeks, do each exercise for one set of 15 reps. Rest 60-90 seconds 
 between sets.
@@ -544,7 +606,62 @@ Author:  Doug Lawrenson
 
 ### Overview
 
-This is a 12-week beginner workout routine designed to introduce you to various gym equipment and basic bodybuilding exercises. The program runs for 3 days per week, with each workout lasting approximately 30-45 minutes. The main goal is to build muscle. The first six weeks focus on a total body circuit, progressing from 1 set of 15 reps to 2 sets of 12 reps with increased weight. The final six weeks transition to an upper/lower split, performed on non-consecutive days, with a focus on increased intensity and slightly lower rep ranges for most exercises."
+This is a 12-week beginner workout routine designed to introduce you to various gym equipment and basic bodybuilding exercises. The program runs for 3 days per week, with each workout lasting approximately 30-45 minutes. The main goal is to build muscle. The first six weeks focus on a total body circuit, progressing from 1 set of 15 reps to 2 sets of 12 reps with increased weight. The final six weeks transition to an upper/lower split, performed on non-consecutive days, with a focus on increased intensity and slightly lower rep ranges for most exercises.","### Weeks 1-3: Total Body Circuit Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Leg Press | 1 | 15 | |
+| Lying Leg Curl | 1 | 15 | |
+| Seated Cable Curl | 1 | 15 | |
+| Flat Bench Press | 1 | 15 | |
+| Dumbbell Press | 1 | 15 | |
+| Dumbbell Shrug | 1 | 15 | |
+| Tricep Pushdown | 1 | 15 | |
+| Barbell Curl | 1 | 15 | |
+| Back Extension | 1 | 15 | |
+| Standing Calf Raise | 1 | 15 | |
+| Barbell Wrist Curl | 1 | 15 | |
+| Crunches | 1 | 15 | |
+
+### Weeks 4-6: Total Body Circuit Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Leg Press | 2 | 12 | |
+| Lying Leg Curl | 2 | 12 | |
+| Seated Cable Row | 2 | 12 | |
+| Flat Bench Press | 2 | 12 | |
+| Dumbbell Press | 2 | 12 | |
+| Dumbbell Shrug | 2 | 12 | |
+| Tricep Pushdown | 2 | 12 | |
+| Barbell Curl | 2 | 12 | |
+| Back Extension | 2 | 12 | |
+| Standing Calf Raise | 2 | 12 | |
+| Barbell Wrist Curl | 2 | 12 | |
+| Crunches | 2 | 12 | |
+
+### Workout 1: Upper Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Flat Dumbbell Press | 2 | 10–12 | |
+| Pec Deck Fly | 1 | 10–12 | |
+| Single Arm Dumbbell Row | 2 | 10–12 | |
+| Seated Cable Row | 1 | 10–12 | |
+| Seated Dumbbell Press | 2 | 10–12 | |
+| Dumbbell Lateral Raise | 1 | 10–12 | |
+| Dumbbell Shrug | 2 | 10–15 | |
+| Tricep Pushdown | 2 | 10–15 | |
+| Barbell Curl | 2 | 10–12 | |
+| Barbell Wrist Curl | 2 | 10–12 | |
+
+### Workout 2: Lower Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Smith Machine Squats | 1 | 8–12 | |
+| Leg Extension | 1 | 10–12 | |
+| Lying Leg Curl | 1 | 10–12 | |
+| Back Extension | 1 | 20–30 | |
+| Standing Calf Raise | 1 | 12–15 | |
+| Crunches | 2 | 15–40 | |
+| Reverse Crunch | 2 | 15–30 | |"
 ./samples/begineer/4dayupperlowerplantfitnessworkout_0.pdf,"Planet Fitness Upper Body Workout A
 Exercise Sets Reps
 1. Dumbbell Bench Press 4 8 - 12
@@ -699,7 +816,49 @@ Target Gender: Male & FemaleAuthor:  Josh England
 
 ### Overview
 
-This is a 4-day per week upper/lower split program designed for beginners, with a primary goal of building muscle. Each workout session is expected to last between 45 to 70 minutes, utilizing equipment commonly found at Planet Fitness, including bodyweight, cables, dumbbells, and machines. The program is suitable for both male and female individuals and has a duration of 8 weeks."
+This is a 4-day per week upper/lower split program designed for beginners, with a primary goal of building muscle. Each workout session is expected to last between 45 to 70 minutes, utilizing equipment commonly found at Planet Fitness, including bodyweight, cables, dumbbells, and machines. The program is suitable for both male and female individuals and has a duration of 8 weeks.","### Planet Fitness Upper Body Workout A
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dumbbell Bench Press | 4 | 8–12 | |
+| Machine Chest Fly | 3 | 10–15 | |
+| Dumbbell Row | 4 | 8–12 | |
+| Lat Pull Down | 4 | 8–12 | |
+| Machine Shoulder Press | 4 | 8–12 | |
+| Dumbbell Lateral Raise | 3 | 10–15 | |
+| Machine Tricep Dip | 2 | 8–12 | |
+| Cable Curl | 2 | 10–15 | |
+
+### Planet Fitness Lower Body Workout A
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Leg Press | 4 | 8–12 | |
+| Dumbbell Stiff Leg Deadlift | 4 | 8–12 | |
+| Leg Extension | 3 | 12–15 | |
+| Leg Curl | 3 | 12–15 | |
+| Machine Glute Kickback | 3 | 12–15 | |
+| Standing Calf Raise | 3 | 20 | |
+
+### Planet Fitness Upper Body Workout B
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Seated Dumbbell Press | 4 | 8–12 | |
+| Cable Face Pull | 3 | 10–15 | |
+| Smith Machine Row | 4 | 8–12 | |
+| Machine Pull Up | 4 | 8–12 | |
+| Incline Dumbbell Press | 4 | 8–12 | |
+| Cable Fly | 3 | 10–15 | |
+| Dumbbell Curl | 2 | 8–12 | |
+| Skullcrusher | 2 | 8–12 | |
+
+### Planet Fitness Lower Body Workout B
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Goblet Squat | 4 | 8–12 | |
+| Smith Machine Hip Thrust | 4 | 8–12 | |
+| Dumbbell Deadlift | 4 | 8–12 | |
+| Dumbbell Lunge | 3 | 10–15 | Each Leg |
+| Seated Leg Curl | 3 | 10–15 | |
+| Seated Calf Raise | 3 | 20 | |"
 ./samples/begineer/bodyweightbasics.pdf,"Day 1: Upper Body
 Exercise Sets Reps
 Pull Ups 3 Failure
@@ -790,7 +949,29 @@ Author:  Roger “Rock” Lockridge","Here is your reorganized bodyweight workou
 
 ### Overview
 
-This is a 3-day per week bodyweight workout plan designed for beginners or those needing a break from weights. The weekly split focuses on hitting major muscle groups across three distinct days: Upper Body, Lower Body, and Core. The main goal of this program is to build a good foundation for general fitness using only bodyweight exercises."
+This is a 3-day per week bodyweight workout plan designed for beginners or those needing a break from weights. The weekly split focuses on hitting major muscle groups across three distinct days: Upper Body, Lower Body, and Core. The main goal of this program is to build a good foundation for general fitness using only bodyweight exercises.","### Day 1: Upper Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Pull Ups | 3 | AMAP | (As Many As Possible) |
+| Inverted Row | 3 | 10–12 | |
+| Dips | 3 | AMAP | (As Many As Possible) |
+| Feet Elevated Push up | 3 | 15 | |
+
+### Day 2: Lower Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Squat Jumps | 3 | 30 Secs | |
+| Walking Lunge | 3 | 20 Each Leg | |
+| Bodyweight Calf Raises | 3 | AMAP | (As Many As Possible) |
+
+### Day 3: Core
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Full Sit Up | 3 | 15 | |
+| Lying Leg Raise | 3 | 15 | |
+| Oblique Crunch | 3 | 20 | |
+| Bicycle | 3 | 30 Secs | |
+| Plank | 3 | AMAP | (As Many As Possible) |"
 ./samples/begineer/thebest15minutewarmups.pdf,"Exercise Sets Reps/Time Rest
 Fast-Paced Walk 1 3 Min 30 - 45 Sec
 Plantar Fascia w/ Lacrosse Ball 1 15 Sec, Each Foot 30 - 45 Sec
@@ -934,7 +1115,44 @@ Upper Body Focused Warm-Up
 
 ### Overview
 
-This plan provides three distinct 15-minute warm-up routines: a Full-Body Focus, a Lower Body Focus, and an Upper Body Focus. Each routine is designed to be performed for 1 set per exercise, with most exercises followed by a 30-45 second rest period (unless otherwise noted). The overall goal is general fitness, preparing the body for any subsequent workout program by maximizing readiness in a versatile and quick manner. This plan can be incorporated into your weekly routine as needed, depending on your main workout split."
+This plan provides three distinct 15-minute warm-up routines: a Full-Body Focus, a Lower Body Focus, and an Upper Body Focus. Each routine is designed to be performed for 1 set per exercise, with most exercises followed by a 30-45 second rest period (unless otherwise noted). The overall goal is general fitness, preparing the body for any subsequent workout program by maximizing readiness in a versatile and quick manner. This plan can be incorporated into your weekly routine as needed, depending on your main workout split.","### Full-Body Focused Warm-Up
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Fast-Paced Walk | 1 | 3 Min | |
+| Plantar Fascia w/ Lacrosse Ball | 1 | 15 Sec | Each Foot |
+| Donkey Calf Raise | 1 | 15 | |
+| Dumbbell Goblet Squat | 1 | 15 | |
+| Bodyweight Walking Lunge | 1 | 10 | Each Leg |
+| Side Plank | 1 | 30 Sec | Each Side |
+| Plyometric Push Up | 1 | 15 | |
+| Rack Lat Stretch | 1 | 30 Sec | |
+
+### Lower Body Focused Warm-Up
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Fast-Paced Walk | 1 | 3 Min | |
+| Bodyweight Standing Calf Raise | 1 | 15 | |
+| IT Band Foam Roller | 1 | 30 Sec | Each Side |
+| Bodyweight Single-Leg Deadlift | 1 | 15 | Each Side |
+| Prisoner Squat | 1 | 15 | |
+| Prisoner Squat (Hold at the Bottom) | 1 | 30 Sec | |
+| Superman | 1 | 30 Sec | |
+| Plank | 1 | 30 Sec | |
+| Band Pull-Apart | 1 | 15 | |
+
+### Upper Body Focused Warm-Up
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Fast-Paced Walk | 1 | 3 Min | |
+| Push Up | 1 | 15 | |
+| Bench Dips | 1 | 15 | |
+| Arm Circles (Clockwise) | 1 | 15 | |
+| Arm Circles (Counter Clockwise) | 1 | 15 | |
+| Eccentric Only Pull Up | 1 | 5 | |
+| Seated Zottman Curl | 1 | 15 | |
+| 90/90 Hip Crossover | 1 | 15 | Each Side |
+| Sit Up | 1 | 15 | |
+| Jump Squat | 1 | 15 | |"
 ./samples/chest/12weekstoabiggerbenchpress.pdf,"Monday
 Exercise Sets Reps
 Bench Press 3 See Notes
@@ -1018,7 +1236,26 @@ Author:  Jonathan Byrd","# 12 Weeks to a Bigger Bench Press
 
 ## Overview
 
-This is a 12-week strength specialization program designed by Jonathan Byrd, primarily focused on increasing your Bench Press strength. The program is structured across 3 days per week, with each workout lasting approximately 45-60 minutes. It's suitable for beginners and utilizes a variety of equipment including barbells, dumbbells, bodyweight, EZ bars, and machines. The weekly split appears to be a full-body or upper/lower split with a strong emphasis on pressing movements and supporting muscle groups."
+This is a 12-week strength specialization program designed by Jonathan Byrd, primarily focused on increasing your Bench Press strength. The program is structured across 3 days per week, with each workout lasting approximately 45-60 minutes. It's suitable for beginners and utilizes a variety of equipment including barbells, dumbbells, bodyweight, EZ bars, and machines. The weekly split appears to be a full-body or upper/lower split with a strong emphasis on pressing movements and supporting muscle groups.","### Monday
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Bench Press | 3 | | See article for rep cycle |
+| Close Grip Bench Press or Paused Bench Press | 3 | 8 | |
+| Dumbbell Skullcrusher or Tricep Extensions | 3 | 8 | If Tricep Extensions, do 20 reps |
+
+### Wednesday
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Barbell Rows or Military Press | 3 | 6 | |
+| Pull Ups or One Arm Dumbbell Rows | 3 | 5–10 | If One Arm Dumbbell Rows, do 10 reps |
+| Military Press or Lat Pulldowns | 3 | 8 | If Lat Pulldowns, do 10 reps |
+
+### Friday
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Paused Bench Press or Close Grip Bench Press | 3 | 10 | |
+| Dumbbell Bench Press or Incline Dumbbell Bench Press | 3 | 20 | |
+| Tricep Extensions or Dumbbell Skullcrushers | 3 | 20 | |"
 ./samples/chest/bestchestworkout.pdf,"The Stretch & Push Workout
 Exercise Sets Reps Rest
 Incline Dumbbell Fly 3 8 - 10 90 Secs
@@ -1075,7 +1312,15 @@ Author:  Roger “Rock” Lockridge","Here is your reorganized workout plan:
 
 ### Overview
 
-This is a single-day, intermediate-level chest workout routine known as ""The Push & Stretch Method,"" designed by Roger “Rock” Lockridge. The main goal is to build muscle by thoroughly and intensely working the chest. It's part of an 8-week program, with each session lasting 45-60 minutes, utilizing barbells, bodyweight, cables, and dumbbells."
+This is a single-day, intermediate-level chest workout routine known as ""The Push & Stretch Method,"" designed by Roger “Rock” Lockridge. The main goal is to build muscle by thoroughly and intensely working the chest. It's part of an 8-week program, with each session lasting 45-60 minutes, utilizing barbells, bodyweight, cables, and dumbbells.","### The Stretch & Push Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Incline Dumbbell Fly | 3 | 8–10 | Rest 90 Secs |
+| Incline Barbell Bench Press | 3 | 8–10 | Rest 90 Secs |
+| Flat Cable Fly | 3 | 10–12 | Rest 90 Secs |
+| Flat Dumbbell Bench Press | 3 | 10–12 | Rest 90 Secs |
+| Cable Crossover | 3 | 12 | Rest 60 Secs |
+| Chest Dip | 2 | AMRAP | (As Many As Possible), Rest 60 Secs |"
 ./samples/chest/pecpounder8weekchestworkouttoshatteryourplateau_0.pdf,"The Hybrid PRRS™ Method
 Exercise Tempo Sets Reps
 Flat DB Press 6/1/X 3 4 - 6
@@ -1226,7 +1471,42 @@ This program, designed by Eric Broser, focuses on building a colossal chest by a
 
 ## Overview
 
-This ""Pec-Pounder"" program is an 8-week intermediate-level chest specialization routine designed to build muscle and break through plateaus. It is structured as a single-day-per-week workout, with four distinct ""methods"" (Hybrid PRRS™, High/Low Rep, SPEC™, and SHOCK) provided. The intent is to alternate these methods each week or session to provide varied stimuli for chest growth. Each workout session is expected to last 45-60 minutes and utilizes barbells, dumbbells, cables, and machines."
+This ""Pec-Pounder"" program is an 8-week intermediate-level chest specialization routine designed to build muscle and break through plateaus. It is structured as a single-day-per-week workout, with four distinct ""methods"" (Hybrid PRRS™, High/Low Rep, SPEC™, and SHOCK) provided. The intent is to alternate these methods each week or session to provide varied stimuli for chest growth. Each workout session is expected to last 45-60 minutes and utilizes barbells, dumbbells, cables, and machines.","### The Hybrid PRRS™ Method
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Flat DB Press | 3 | 4–6 | |
+| Superset: Incline DB Fly + Weighted Dips | 3 | | Rest for one minute between supersets |
+| Incline DB Fly | | 10–12 | (A1 of Superset) |
+| Weighted Dips | | 7–9 | (A2 of Superset) |
+| Incline Smith Press | 3 | 16–20, 13–15, 10–12 | |
+
+### The High/Low Rep Method
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Leverage Chest Press | 3 | 16–20 | |
+| BB Incline Press | 3 | 6–8 | |
+| Low Cable Crossover | 3 | 16–20 | |
+| Weighted Dips | 3 | 6–8 | |
+
+### The SPEC™ Method
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Incline DB Fly | 3 | 7–9 | |
+| Cable Crossover | 3 | 7–9 | |
+| Bench Press | 3 | 7–9 | |
+| Hammer Machine Incline Press | 3 | 7–9 | |
+
+### The SHOCK Method
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Superset: Bench Press + Flat DB Fly | 2 | | Rest for one minute between supersets |
+| Bench Press | | 7–9 | (A1 of Superset) |
+| Flat DB Fly | | 7–9 | (A2 of Superset) |
+| Hammer Machine Incline Press | 2 | 7–9, 4–6 | Dropset |
+| Superset: Incline DB Fly + Decline DB Press | 2 | | Rest for one minute between supersets |
+| Incline DB Fly | | 7–9 | (B1 of Superset) |
+| Decline DB Press | | 7–9 | (B2 of Superset) |
+| Weighted Dips | 2 | 7–9, 4–6 | Dropset |"
 ./samples/fat-loss/8weekbeginnerfatlossworkout.pdf,"Exercise Sets Reps Rest
 Dumbbell Pullover 2 10 45 Sec
 Dumbbell Bench Press 2 10 45 Sec
@@ -1370,7 +1650,45 @@ Training + Cardio Schedule Option 1 (Same Day, Separate Times)
 
 ### Overview
 
-This is an 8-week beginner fat loss workout program designed by Roger “Rock” Lockridge, suitable for both males and females. It follows a 4-day per week split, alternating between upper and lower body workouts (A and B versions). The primary goal is fat loss, and the program utilizes a variety of equipment including barbells, bodyweight, cables, dumbbells, and machines. It's recommended to incorporate cardio alongside these training days for optimal fat loss results."
+This is an 8-week beginner fat loss workout program designed by Roger “Rock” Lockridge, suitable for both males and females. It follows a 4-day per week split, alternating between upper and lower body workouts (A and B versions). The primary goal is fat loss, and the program utilizes a variety of equipment including barbells, bodyweight, cables, dumbbells, and machines. It's recommended to incorporate cardio alongside these training days for optimal fat loss results.","### Workout #1 - Upper Body Workout A
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dumbbell Pullover | 2 | 10 | Rest: 45 Sec |
+| Dumbbell Bench Press | 2 | 10 | Rest: 45 Sec |
+| Arnold Press | 2 | 10 | Rest: 45 Sec |
+| Dumbbell Curl | 2 | 10 | Rest: 30 Sec |
+| Overhead Tricep Extension | 2 | 10 | Rest: 30 Sec |
+| Lying Leg Raise | 2 | 10 | Rest: 30 Sec |
+
+### Workout #2 - Lower Body Workout A
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Goblet Squat | 2 | 10 | Rest: 45 Sec |
+| Hip Thrust | 2 | 10 | Rest: 45 Sec |
+| Walking Lunge | 2 | 10 | Each Leg; Rest: 45 Sec |
+| Stiff Leg Deadlift | 2 | 10 | Rest: 30 Sec |
+| Standing Calf Raise | 2 | 10 | Rest: 30 Sec |
+| Oblique Crunch | 2 | 10 | Each Side; Rest: 30 Sec |
+
+### Workout #3 - Upper Body Workout B
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Bent Over Dumbbell Row | 2 | 20 | Rest: 45 Sec |
+| Incline Dumbbell Bench Press | 2 | 20 | Rest: 45 Sec |
+| Dumbbell Reverse Fly | 2 | 20 | Rest: 30 Sec |
+| Cable Curl | 2 | 20 | Rest: 30 Sec |
+| Straight Bar Tricep Extension | 2 | 20 | Rest: 30 Sec |
+| Plank | 2 | 30 Sec | Hold for 30 Sec; Rest: 30 Sec |
+
+### Workout #4 - Lower Body Workout B
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Squat Jumps | 2 | 20 | Rest: 45 Sec |
+| Standing Glute Kickback | 2 | 20 | Each Leg; Rest: 45 Sec |
+| Leg Curl | 2 | 20 | Rest: 30 Sec |
+| Leg Extension | 2 | 20 | Rest: 30 Sec |
+| Seated Calf Raise | 2 | 20 | Rest: 30 Sec |
+| Sit-Up | 2 | 20 | Rest: 30 Sec |"
 ./samples/fat-loss/8weekbeginnerfatlossworkoutforwomen_0.pdf,"Exercise Sets Reps
 Incline Dumbbell Press 3 12, 10, 8
 Bent-Over Barbell Row 3 12, 10, 8
@@ -1517,7 +1835,50 @@ Workout #4 - Lower Body","Here is your reorganized weekly workout plan:
 
 ### Overview
 
-This is an 8-week beginner fat loss workout program designed for women, structured as a 4-day per week Upper/Lower split. The main focus is on fat loss, incorporating a mix of compound and isolation strength exercises. Each workout session concludes with 20-30 minutes of Zone 2 cardio to further support fat burning. The strength exercises generally follow a progressive rep scheme (12, 10, 8 reps), while core exercises maintain consistent repetitions."
+This is an 8-week beginner fat loss workout program designed for women, structured as a 4-day per week Upper/Lower split. The main focus is on fat loss, incorporating a mix of compound and isolation strength exercises. Each workout session concludes with 20-30 minutes of Zone 2 cardio to further support fat burning. The strength exercises generally follow a progressive rep scheme (12, 10, 8 reps), while core exercises maintain consistent repetitions.","### Workout #1 - Upper Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Incline Dumbbell Press | 3 | 12–10–8 | |
+| Bent-Over Barbell Row | 3 | 12–10–8 | |
+| Smith Machine Shoulder Press | 3 | 12–10–8 | |
+| Alternate Dumbbell Curl | 3 | 12–10–8 | |
+| Lying Triceps Extension | 3 | 12–10–8 | |
+| Lying Leg Raise | 3 | 12 | |
+| Cardio | | | Do 20–30 minutes of Zone 2 cardio |
+
+### Workout #2 - Lower Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Goblet Squat | 3 | 12–10–8 | |
+| Stiff Leg Deadlift | 3 | 12–10–8 | |
+| Leg Press | 3 | 12–10–8 | |
+| Walking Lunge | 3 | 12–10–8 | |
+| Seated Calf Raise | 3 | 12–10–8 | |
+| Crunches | 3 | 12 | |
+| Cardio | | | Do 20–30 minutes of Zone 2 cardio |
+
+### Workout #3 - Upper Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Wide Grip Lat Pull Down | 3 | 12–10–8 | |
+| Flat Bench Press | 3 | 12–10–8 | |
+| Lateral Raise | 3 | 12–10–8 | |
+| Hammer Dumbbell Curl | 3 | 12–10–8 | |
+| Straight Bar Tricep Extension | 3 | 12–10–8 | |
+| Abdominal Air Bike | 3 | 12 | |
+| Cardio | | | Do 20–30 minutes of Zone 2 cardio |
+
+### Workout #4 - Lower Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Squat | 3 | 12–10–8 | |
+| Deadlift | 3 | 12–10–8 | |
+| Dumbbell Step Up | 3 | 12–10–8 | |
+| Abductor Machine | 3 | 12–10–8 | |
+| Adductor Machine | 3 | 12–10–8 | |
+| Seated Calf Raise | 3 | 12–10–8 | |
+| Exercise Ball Crunch | 3 | 12 | |
+| Cardio | | | Do 20–30 minutes of Zone 2 cardio |"
 ./samples/fat-loss/fatdestroyer_0.pdf,"Day 1
 Exercise Sets Reps
 Upper A
@@ -1663,7 +2024,45 @@ Author:  Max Riley","Here is your structured weekly workout plan:
 
 ### Overview
 
-This is a 4-day per week Upper/Lower split program designed for beginners, with a primary goal of building muscle. The workout is structured across four days (Day 1, 2, 4, 5), allowing for rest days in between. Each session is estimated to take 30-45 minutes, focusing on compound and isolation movements to target all major muscle groups."
+This is a 4-day per week Upper/Lower split program designed for beginners, with a primary goal of building muscle. The workout is structured across four days (Day 1, 2, 4, 5), allowing for rest days in between. Each session is estimated to take 30-45 minutes, focusing on compound and isolation movements to target all major muscle groups.","### Day 1 Upper A
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Incline Bench Press | 3 | 8–10 | |
+| One Arm Dumbbell Row | 3 | 10–12 | |
+| Seated Barbell Press | 3 | 8–10 | |
+| Pull Ups | 3 | 10 | |
+| Skullcrushers | 3 | 10–12 | |
+| Dumbbell Curl | 3 | 10–12 | |
+
+### Day 2 Lower A
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Squats | 3 | 8–10 | |
+| Leg Curl | 3 | 12–15 | |
+| Leg Extension | 3 | 12–15 | |
+| Leg Press Calf Raise | 3 | 15–20 | |
+| Plank | 3 | 60 sec | |
+| Twisting Hanging Knee Raise | 3 | 20 | |
+
+### Day 4 Upper B
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dumbbell Bench Press | 3 | 10 | |
+| Barbell Row | 3 | 8–10 | |
+| Dumbbell Lateral Raise | 3 | 12–15 | |
+| Lat Pull Down | 3 | 10–12 | |
+| Cable Tricep Extensions | 3 | 10–12 | |
+| EZ Bar Preacher Curl | 3 | 10–12 | |
+
+### Day 5 Lower B
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Leg Press | 3 | 15–20 | |
+| Stiff Leg Deadlift | 3 | 8–10 | |
+| Walking Dumbbell Lunge | 3 | 10 | |
+| Seated Calf Raise | 3 | 15–20 | |
+| Cable Crunch | 3 | 20 | |
+| Russian Twist | 3 | 20 | |"
 ./samples/fat-loss/springshred.pdf,"Day 1: Chest & Abs
 Exercise Warm Up Sets Work Sets Intensity Method
 Incline Barbell Bench Press 2 x 8 - 10 3 x 10 2 - 3 Forced Reps
@@ -1900,7 +2299,54 @@ HIIT cardio can be performed 3-4 times a week or as you see fit based on your in
 
 ### Overview
 
-This is an advanced, 8-week ""Spring Shred"" program designed for fat loss, with a total of 5 training days per week. The split focuses on specific muscle groups each day: Chest & Abs, Back, Shoulders, Arms, and Legs. Each workout is estimated to take 45-60 minutes and incorporates various intensity methods such as forced reps, drop sets, rest-pause, and supersets to maximize muscle engagement and calorie expenditure. The plan also includes a structured HIIT cardio protocol to be performed 3-4 times per week, ideally separate from weight training sessions."
+This is an advanced, 8-week ""Spring Shred"" program designed for fat loss, with a total of 5 training days per week. The split focuses on specific muscle groups each day: Chest & Abs, Back, Shoulders, Arms, and Legs. Each workout is estimated to take 45-60 minutes and incorporates various intensity methods such as forced reps, drop sets, rest-pause, and supersets to maximize muscle engagement and calorie expenditure. The plan also includes a structured HIIT cardio protocol to be performed 3-4 times per week, ideally separate from weight training sessions.","### Day 1: Chest & Abs
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Incline Barbell Bench Press | 3 | 10 | 2 - 3 Forced Reps |
+| Dumbbell Fly | 3 | 10–12 | Drop Sets |
+| Weighted Dip | 3 | 10–12 | Rest–Pause |
+| Pec Dec | 3 | 12 | Holds on Last Rep |
+| Superset: Cable Crossover + Pushup | 3 | 12 | |
+| Hanging Leg Raise | 3 | 12 | Holds on Last Rep |
+| Superset: Decline Situp + Side Bends | 3 | 15 | |
+| Plank | 3 | AMAP | (As Many As Possible) |
+| Rope Crunch | 3 | 15 | Drop Sets |
+
+### Day 2: Back
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Neutral Grip Pull Ups | 3 | AMAP | Rest–Pause (As Many As Possible) |
+| Bent Over Barbell Row | 3 | 10–12 | Holds on Last Rep |
+| Superset: Reverse Grip Pulldown + Straight Arm Pulldown | 3 | 8–10 | |
+| Wide Grip Seated Row | 3 | 12 | 2 - 3 Forced Reps |
+| Rack Deadlift | 3 | 15 | Drop Sets |
+
+### Day 3: Shoulders
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Superset: Upright Row + Seated Lateral Raise | 3 | 10 | |
+| Seated Smith Machine Shoulder Press | 3 | 10–12 | Drop Sets |
+| Front Plate Raise | 3 | 12 | 2 - 3 Forced Reps |
+| High Rope Face Pull | 3 | 12 | Rest–Pause |
+
+### Day 4: Arms
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| EZ Bar Preacher Curl | 3 | 10–12 | 2 - 3 Forced Reps |
+| Close Grip Bench Press | 3 | 10–12 | Rest–Pause |
+| Hammer Curl | 3 | 12 | Drop Sets |
+| Overhead Rope Extension | 3 | 12 | Holds on Last Rep |
+| Superset: Standing Cable Curl + Reverse Grip Pushdown | 3 | 15 | |
+
+### Day 5: Legs
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Squat | 3 | 8–10 | Rest–Pause |
+| Leg Press | 3 | 15 | Drop Sets |
+| Single Leg Extension | 3 | 15 | Holds on Last Rep |
+| Superset: Stiff-Legged Deadlift + Seated Leg Curl | 3 | 15 | |
+| Lying Leg Curl | 3 | 15 | Forced Reps |
+| Superset: Standing Calf Raise + Seated Calf Raise | 3 | 20 | |"
 ./samples/full-body/2weekworkoutplantojumpstartyourreturntothegym.pdf,"Exercise Sets Reps Rest
 Barbell  or  Dumbbell Deadlift 2 - 3 8 - 10 1 - 2 min
 Leg Press 2 - 3 8 - 10 1 - 2 min
@@ -2088,7 +2534,61 @@ Week 2: Lower Body Workout
 
 ### Overview
 
-This is a 2-week beginner-level workout plan designed for general fitness, specifically to help individuals reacquaint themselves with the gym after a break. The program runs 4 days per week, with each workout session lasting approximately 60 minutes. Week 1 focuses on full-body workouts, while Week 2 transitions to an upper/lower split, providing a comprehensive approach to rebuilding strength and fitness."
+This is a 2-week beginner-level workout plan designed for general fitness, specifically to help individuals reacquaint themselves with the gym after a break. The program runs 4 days per week, with each workout session lasting approximately 60 minutes. Week 1 focuses on full-body workouts, while Week 2 transitions to an upper/lower split, providing a comprehensive approach to rebuilding strength and fitness.","### Week 1: Full-Body Workout A
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Barbell or Dumbbell Deadlift | 2–3 | 8–10 | |
+| Leg Press | 2–3 | 8–10 | |
+| Leg Curl | 2–3 | 8–10 | |
+| Dumbbell Bench Press | 2–3 | 8–10 | |
+| Wide Grip Lat Pulldown | 2–3 | 8–10 | |
+| Dumbbell or Machine Lateral Raise | 2–3 | 8–10 | |
+| Incline Dumbbell Curl | 2–3 | 8–10 | |
+| Straight Bar Tricep Extension | 2–3 | 8–10 | |
+| Crunch | 2–3 | 8–10 | |
+| Lying Leg Raise | 2–3 | 8–10 | |
+
+### Week 1: Full-Body Workout B
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dumbbell Bench Press | 2–3 | 8–10 | |
+| Wide Grip Lat Pulldown | 2–3 | 8–10 | |
+| Dumbbell or Machine Lateral Raise | 2–3 | 8–10 | |
+| Incline Dumbbell Curl | 2–3 | 8–10 | |
+| Straight Bar Tricep Extension | 2–3 | 8–10 | |
+| Barbell or Dumbbell Deadlift | 2–3 | 8–10 | |
+| Leg Press | 2–3 | 8–10 | |
+| Leg Curl | 2–3 | 8–10 | |
+| Crunch | 2–3 | 8–10 | |
+| Lying Leg Raise | 2–3 | 8–10 | |
+
+### Week 2: Upper Body Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Incline Barbell Bench Press | 2–3 | 8–10 | |
+| Low Incline Dumbbell Flys | 2–3 | 8–10 | |
+| Bent-Over Barbell Row | 2–3 | 8–10 | |
+| Reverse Grip Lat Pulldown | 2–3 | 8–10 | |
+| Arnold Press | 2–3 | 8–10 | |
+| Single Arm Lateral Raise | 2–3 | 8–10 | |
+| Concentration Curl | 2–3 | 8–10 | |
+| Lying Tricep Extension | 2–3 | 8–10 | |
+| Weighted Crunch | 2–3 | 8–10 | |
+| Hanging Leg Raise | 2–3 | 8–10 | |
+
+### Week 2: Lower Body Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Barbell or Dumbbell Deadlift | 2–3 | 8–10 | |
+| Walking Lunge | 2–3 | 8–10 | |
+| Barbell Squat | 2–3 | 8–10 | |
+| Single-Leg Press | 2–3 | 8–10 | |
+| Seated Calf Raise | 2–3 | 8–10 | |
+| Standing Calf Raise | 2–3 | 8–10 | |
+| Standing Side Bend | 2–3 | 8–10 | |
+| V-Ups | 2–3 | 8–10 | |
+| Reverse Crunch | 2–3 | 8–10 | |
+| Plank | 2–3 | 30–60 sec | |"
 ./samples/full-body/3dayfullbodyplantfitnessworkout.pdf,"Planet Fitness Full Body Workout Day 1
 Exercise Sets Reps
 1. Goblet Squat 4 8 - 12
@@ -2223,7 +2723,40 @@ Target Gender: Male & FemaleAuthor:  Josh England
 
 ### Overview
 
-This is a 3-day per week full-body workout program designed for beginners, with the primary goal of building muscle. Each session is expected to last between 45 to 70 minutes, utilizing equipment typically found at Planet Fitness, including bodyweight, cables, dumbbells, and machines. The program is suitable for both male and female individuals and has a duration of 8 weeks."
+This is a 3-day per week full-body workout program designed for beginners, with the primary goal of building muscle. Each session is expected to last between 45 to 70 minutes, utilizing equipment typically found at Planet Fitness, including bodyweight, cables, dumbbells, and machines. The program is suitable for both male and female individuals and has a duration of 8 weeks.","### Planet Fitness Full Body Workout Day 1
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Goblet Squat | 4 | 8–12 | |
+| Lying Leg Curl | 3 | 10–15 | |
+| Standing Calf Raise | 2 | 15–20 | |
+| Dumbbell Row | 4 | 8–12 | |
+| Lat Pull Down | 3 | 10–15 | |
+| Incline Dumbbell Bench Press | 4 | 8–12 | |
+| Lateral Raise | 3 | 10–15 | |
+
+### Planet Fitness Full Body Workout Day 2
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dumbbell Stiff Leg Deadlift | 4 | 8–12 | |
+| Leg Extension | 3 | 10–15 | |
+| Assisted Pull Up Machine | 4 | 8–12 | |
+| Seated Cable Row | 3 | 10–15 | |
+| Seated Dumbbell Press | 4 | 8–12 | |
+| Dumbbell Bench Press | 3 | 10–15 | |
+| Skullcrusher | 3 | 8–12 | |
+| Dumbbell Curl | 3 | 8–12 | |
+
+### Planet Fitness Full Body Workout Day 3
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Leg Press | 4 | 8–12 | |
+| Walking Lunge | 3 | 10–15 | Each side |
+| Standing Calf Raise | 2 | 15–20 | |
+| Smith Machine Row | 4 | 8–12 | |
+| Cable Face Pull | 3 | 10–15 | |
+| Push Up | 3 | 10–15 | |
+| Close Grip Push Up | 3 | 8–12 | |
+| Cable Curl | 3 | 8–12 | |"
 ./samples/full-body/thebestfullbodyworkoutroutineforwomen_1.pdf,"Women's Full Body Workout 1
 Exercise Sets Reps
 Squat 4 6 - 8
@@ -2452,7 +2985,75 @@ Author:  M&S Team
 
 ### Overview
 
-This is a 4-day per week full-body workout routine designed for beginners, with a primary goal of fat loss. Each workout session is expected to last between 60 to 90 minutes and incorporates a variety of equipment including bands, barbells, dumbbells, cables, machines, and bodyweight exercises. The program is structured to hit all major muscle groups multiple times throughout the week, with optional accessory exercises provided for additional focus."
+This is a 4-day per week full-body workout routine designed for beginners, with a primary goal of fat loss. Each workout session is expected to last between 60 to 90 minutes and incorporates a variety of equipment including bands, barbells, dumbbells, cables, machines, and bodyweight exercises. The program is structured to hit all major muscle groups multiple times throughout the week, with optional accessory exercises provided for additional focus.","### Women's Full Body Workout 1
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Squat | 4 | 6–8 | |
+| Leg Press | 3 | 10–15 | |
+| Rear Foot Elevated Split Squat | 3 | 8–12 | Each leg |
+| Overhead Press | 4 | 8 | |
+| One Arm Dumbbell Row | 4 | 6–8 | |
+| Lat Pull Down | 3 | 8–12 | |
+
+### Optional Additional Exercises 1
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Hyperextension | 3 | 15–20 | |
+| Single Leg Glute Bridge | 3 | 10–15 | Each leg |
+| Mini Band Hip Thruster | 3 | 15 | |
+
+### Women's Full Body Workout 2
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Goblet Squat | 3 | 12–15 | |
+| Dumbbell Stiff Legged Deadlift | 3 | 10–12 | |
+| Lateral Lunge | 3 | 12 | Each leg |
+| Dumbbell Bench Press | 3 | 8–10 | |
+| (Assisted) Pull Up | 3 | AMAP | (As Many As Possible) |
+| Inverted Row | 3 | AMAP | (As Many As Possible) |
+
+### Optional Additional Exercises 2
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dumbbell Curl | 3 | 12 | |
+| Rope Pressdown | 3 | 12 | |
+| EZ Bar Curl | 3 | 12 | |
+| EZ Bar Overhead Extension | 3 | 12 | |
+
+### Women's Full Body Workout 3
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Sumo Deadlift | 4 | 6–8 | |
+| Hip Thrust | 4 | 6–8 | |
+| Barbell Row | 4 | 6–8 | |
+| Seated Dumbbell Press | 3 | 8–12 | |
+| Lateral Raise | 3 | 10–12 | |
+| Push Up | 3 | AMAP | (As Many As Possible) |
+
+### Optional Additional Exercises 3
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Plank | 3 | AMAP | (As Many As Possible) |
+| Exercise Ball Crunch | 3 | 20 | |
+| Hanging Leg Raise | 3 | 12–15 | |
+
+### Women's Full Body Workout 4
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Plie Squat | 3 | 12–15 | |
+| Dumbbell Rear Lunge | 3 | 12–15 | |
+| Landmine Romanian Deadlift | 3 | 12–15 | |
+| T-Bar Row | 4 | 8–12 | |
+| Incline Dumbbell Bench Press | 3 | 12–15 | |
+| Cable Face Pull | 3 | 15–20 | |
+
+### Optional Additional Exercises 4
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Fog Pumps | 3 | 20–25 | |
+| Glute Kick Back | 3 | 15 | Each leg |
+| Adduction Machine (or Banded) | 3 | 12 | |
+| Abduction Machine (or Banded) | 3 | 12 | |"
 ./samples/full-body/totalpackage.pdf,"Day 1
 Exercise Sets Reps
 Squat 5 5
@@ -2586,7 +3187,44 @@ Author:  Josh England","Here is your reorganized workout plan:
 
 ### Overview
 
-This ""Total Package Workout"" is an intermediate-level, 3-day per week full-body split designed to help individuals build muscle while simultaneously improving strength. Each workout session is estimated to last between 75-90 minutes and utilizes a variety of equipment including barbells, dumbbells, cables, and bodyweight. The program focuses on compound movements with lower reps for strength, complemented by isolation exercises with higher reps for hypertrophy, ensuring a balanced approach to physique development."
+This ""Total Package Workout"" is an intermediate-level, 3-day per week full-body split designed to help individuals build muscle while simultaneously improving strength. Each workout session is estimated to last between 75-90 minutes and utilizes a variety of equipment including barbells, dumbbells, cables, and bodyweight. The program focuses on compound movements with lower reps for strength, complemented by isolation exercises with higher reps for hypertrophy, ensuring a balanced approach to physique development.","### Day 1
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Squat | 5 | 5 | |
+| Dumbbell Bench | 4 | 10 | |
+| Dumbbell Row | 4 | 10 | |
+| Seated Dumbbell Press | 4 | 10 | |
+| Lunge | 4 | 10 | |
+| Dumbbell Curl | 3 | 10 | |
+| Standing Barbell Tricep Extension | 3 | 10 | |
+| Calf Raise | 3 | 12 | |
+| Plank | 5 | 20 secs | |
+
+### Day 2
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Bench Press | 5 | 5 | |
+| Machine Pec Deck | 3 | 12 | |
+| Leg Extension | 4 | 10 | |
+| Leg Curl | 4 | 10 | |
+| Pullup | 4 | 10 | |
+| Seated Lateral Raise | 4 | 10 | |
+| Dumbbell Hammer Curls | 3 | 10 | |
+| Rope Extension | 3 | 10 | |
+| Plank | 5 | 20 secs | |
+
+### Day 3
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Deadlift | 5 | 5 | |
+| Incline Dumbbell Press | 4 | 10 | |
+| Lateral Raise | 4 | 10 | |
+| Pulldown | 4 | 10 | |
+| Leg Press | 4 | 10 | |
+| EZ Bar Curl | 3 | 10 | |
+| Skullcrushers | 3 | 10 | |
+| Dumbbell Shrugs | 3 | 12 | |
+| Plank | 5 | 20 secs | |"
 ./samples/home/15minutecoreconditioningworkoutyoucandoanywhere.pdf,"Exercise Sets Reps Rest
 Sit Up 2 - 3 15 None
 Alternate Straight Leg Lower 2 - 3 15 Each None
@@ -2632,7 +3270,14 @@ This workout is designed to be performed as a single session, repeated 3 times p
 
 ### Overview
 
-This program is a focused 15-minute core conditioning workout designed for general fitness. It is a bodyweight-only routine intended to be performed 3 days per week. The main focus is on strengthening the core muscles through a variety of foundational exercises, making it suitable for beginners."
+This program is a focused 15-minute core conditioning workout designed for general fitness. It is a bodyweight-only routine intended to be performed 3 days per week. The main focus is on strengthening the core muscles through a variety of foundational exercises, making it suitable for beginners.","### 15-Minute Core Conditioning Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Sit Up | 2–3 | 15 | |
+| Alternate Straight Leg Lower | 2–3 | 15 Each | |
+| Side Plank | 2–3 | 15 Each | |
+| Plank to Hip Raise | 2–3 | 15 Each | |
+| Stomach Vacuum | 2–3 | 5 | 30 Sec |"
 ./samples/home/3dayfullbodybeginnerkettlebellworkout.pdf,"Full Body Kettlebell Workout 1
 Exercise Sets Reps
 Kettlebell Squat 3 8
@@ -2734,7 +3379,32 @@ Author:  Josh England
 
 ### Overview
 
-This is a 3-day per week full-body kettlebell workout program, ideal for beginners. The weekly split focuses on hitting all major muscle groups in each session, promoting overall functionality and efficiency. The main goal of this program is to build muscle."
+This is a 3-day per week full-body kettlebell workout program, ideal for beginners. The weekly split focuses on hitting all major muscle groups in each session, promoting overall functionality and efficiency. The main goal of this program is to build muscle.","### Full Body Kettlebell Workout 1
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Kettlebell Squat | 3 | 8 | |
+| Kettlebell Swing | 3 | 8 | |
+| Kettlebell Row | 3 | 8 | |
+| Kettlebell Overhead Press | 3 | 8 | |
+| Turkish Get Up | 3 | 6 | Each |
+
+### Full Body Kettlebell Workout 2
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Kettlebell Romanian Deadlift | 3 | 8 | |
+| Kettlebell Split Lunge | 3 | 8 | Each |
+| Kettlebell Snatch | 3 | 6 | |
+| Kettlebell Row | 3 | 8 | |
+| One Arm Kettlebell Floor Press | 3 | 8 | Each |
+
+### Full Body Kettlebell Workout 3
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Kettlebell Sumo Deadlift | 3 | 8 | |
+| Kettlebell Lateral Lunge | 3 | 8 | Each |
+| Kettlebell Clean | 3 | 6 | |
+| Kettlebell Upright Row | 3 | 8 | |
+| Kettlebell Angled Press | 3 | 8 | |"
 ./samples/home/4dayathomeglutebuildingworkout.pdf,"Exercise Sets Reps
 Bent Over Dumbbell Row 2 - 3 10 - 12
 Dumbbell Floor Press 2 - 3 10 - 12
@@ -2887,7 +3557,48 @@ Bridges .","Here is your reorganized 4-Day At-Home Glute Building Workout Plan:
 
 ### Overview
 
-This is a 4-day per week workout program designed for beginners, focusing on building muscle. The weekly split follows an Upper/Lower body routine, with two dedicated upper body days and two dedicated lower body days. The program emphasizes a mix of dumbbell, kettlebell, band, and bodyweight exercises, with a particular focus on glute development within the lower body sessions. Some exercises include a ""go to failure"" instruction on the final set to maximize muscle stimulus."
+This is a 4-day per week workout program designed for beginners, focusing on building muscle. The weekly split follows an Upper/Lower body routine, with two dedicated upper body days and two dedicated lower body days. The program emphasizes a mix of dumbbell, kettlebell, band, and bodyweight exercises, with a particular focus on glute development within the lower body sessions. Some exercises include a ""go to failure"" instruction on the final set to maximize muscle stimulus.","### Day 1: Upper Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Bent Over Dumbbell Row | 2–3 | 10–12 | |
+| Dumbbell Floor Press | 2–3 | 10–12 | |
+| Band Pull Apart | 2–3 | 10–12 | |
+| Lateral Raise | 2–3 | 10–12 | |
+| Standing Dumbbell Curl | 2–3 | 10–12 | |
+| Close Grip Push Up | 2–3 | 10–12 | Go to failure on final set; alternative: Close Grip Knee Push Up |
+| Ab Crunch | 2–3 | 15–20 | |
+
+### Day 2: Lower Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Banded Good Morning | 2–3 | 15–20 | |
+| Kettlebell Swings | 2–3 | 15–20 | |
+| Dumbbell Goblet Squat | 2–3 | 15–20 | |
+| Dumbbell or Bodyweight Curtsy Lunge | 2–3 | 10–12 | Each Leg |
+| Dumbbell or Banded Glute Bridge | 2–3 | 15–20 | |
+| Standing Calf Raise | 2–3 | 10–12 | |
+| Lateral Band Walk | 2–3 | 10–12 | Each Leg |
+
+### Day 3: Upper Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dumbbell Shoulder Press | 2–3 | 10–12 | |
+| One Arm Dumbbell Row | 2–3 | 10–12 | Each Arm |
+| Alternating Standing Arnold Press | 2–3 | 10–12 | Each Arm |
+| Dumbbell Overhead Tricep Extension | 2–3 | 10–12 | |
+| Dumbbell Rear Delt Fly | 2–3 | 10–12 | Each Arm |
+| Hammer Curl | 2–3 | 10–12 | |
+| Lying Leg Raise | 2–3 | 15–20 | |
+
+### Day 4: Lower Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dumbbell Glute Bridge | 2–3 | 15–20 | |
+| Dumbbell Split Squat | 2–3 | 15–20 | |
+| Plie Squat | 2–3 | 15–20 | |
+| Dumbbell Stiff Leg Deadlift | 2–3 | 15–20 | |
+| Kettlebell Romanian Deadlift | 2–3 | 15–20 | |
+| Banded Glute Bridge | 2–3 | 15–20 | Go to failure on final set; alternative: Bodyweight Glute Bridges |"
 ./samples/home/bandworkout.pdf,"Day 1: Push
 Exercise Sets/Reps Tempo Rests
 Standing Band Shoulder Press 3xAMRAP (0-2RIR) 2-0-1-1 30-45s
@@ -3008,7 +3719,35 @@ Author:  Tom MacCormick
 
 ### Overview
 
-This is a 3-day per week Push, Pull, Legs (PPL) split designed for muscle building using only resistance bands. Each workout focuses on hitting a specific muscle group (Push, Pull, or Legs) with exercises performed for as many reps as possible (AMRAP) while leaving 0-2 reps in reserve (RIR), emphasizing metabolic stress training. The workouts are efficient, typically lasting 30-45 minutes, making them suitable for home training with minimal equipment."
+This is a 3-day per week Push, Pull, Legs (PPL) split designed for muscle building using only resistance bands. Each workout focuses on hitting a specific muscle group (Push, Pull, or Legs) with exercises performed for as many reps as possible (AMRAP) while leaving 0-2 reps in reserve (RIR), emphasizing metabolic stress training. The workouts are efficient, typically lasting 30-45 minutes, making them suitable for home training with minimal equipment.","### Day 1: Push
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Standing Band Shoulder Press | 3 | AMAP | (As Many As Possible) |
+| Band Push Ups | 3 | AMAP | (As Many As Possible) |
+| Single Arm Band Standing Flys | 3 | AMAP | (As Many As Possible) |
+| Band Lateral Raise | 3 | AMAP | (As Many As Possible) |
+| Triceps Pushdown | 3 | AMAP | (As Many As Possible) |
+| Band Pallof Press | 3 | AMAP | (As Many As Possible) |
+
+### Day 2: Pull
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Kneeling Band Lat Pulldowns | 3 | AMAP | (As Many As Possible) |
+| Seated Neutral Grip Band Rows | 3 | AMAP | (As Many As Possible) |
+| Band Moto Rows | 3 | AMAP | (As Many As Possible) |
+| Band Upright Rows | 3 | AMAP | (As Many As Possible) |
+| Band Hammer Curls | 3 | AMAP | (As Many As Possible) |
+| Band Pull-Aparts | 3 | AMAP | (As Many As Possible) |
+
+### Day 3: Legs
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Bulgarian Split Squats | 3 | AMAP | (As Many As Possible) |
+| Band Assisted Nordic Curls | 3 | AMAP | (As Many As Possible) |
+| Heel Elevated One & A Quarter Band Squats | 3 | AMAP | (As Many As Possible); One rep = go all the way down, up a quarter, back down then all the way up |
+| Lying Leg Curls | 3 | AMAP | (As Many As Possible) |
+| Terminal Knee Extension | 3 | AMAP | (As Many As Possible) |
+| Band Goodmornings | 3 | AMAP | (As Many As Possible) |"
 ./samples/legs/bootyburner.pdf,"The Booty Burner Workout
 Exercise Sets Reps
 Superset
@@ -3099,7 +3838,17 @@ Author:  Team Muscle & Strength","Here is the reorganized ""Booty Burner"" worko
 ---
 
 **Overview:**
-This is ""The Booty Burner"" workout, a dedicated glute-focused routine designed by Courtney King and Team Muscle & Strength. It is structured as a single workout session, intended to be performed 1-2 times per week, making it a 1-day per week split (or 2-day if repeated). The primary focus is to build muscle and strengthen the glutes, heavily utilizing supersets to maximize efficiency and minimize rest between exercises within a set. This intermediate-level program is designed to last 8 weeks, with each session taking approximately 45-60 minutes and requiring a variety of equipment including bodyweight, cables, dumbbells, and machines."
+This is ""The Booty Burner"" workout, a dedicated glute-focused routine designed by Courtney King and Team Muscle & Strength. It is structured as a single workout session, intended to be performed 1-2 times per week, making it a 1-day per week split (or 2-day if repeated). The primary focus is to build muscle and strengthen the glutes, heavily utilizing supersets to maximize efficiency and minimize rest between exercises within a set. This intermediate-level program is designed to last 8 weeks, with each session taking approximately 45-60 minutes and requiring a variety of equipment including bodyweight, cables, dumbbells, and machines.","### The Booty Burner Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Single Leg Deadlift | 3 | 10 | Superset with Goblet Squat |
+| Goblet Squat | 3 | 10 | Superset with Single Leg Deadlift |
+| Hyperextension | 3 | 15 | Superset with Reverse Hack Squat |
+| Reverse Hack Squat | 3 | 12 | Superset with Hyperextension |
+| Cable Glute Kickback | 3 | 10 | Per Leg; Superset with Stiff Legged Deadlift |
+| Stiff Legged Deadlift | 3 | 15 | Superset with Cable Glute Kickback |
+| Bodyweight Hip Thrust | 3 | 10 | Superset with Single Leg Bodyweight Hip Thrust |
+| Single Leg Bodyweight Hip Thrust | 3 | 5 | Per Leg; Superset with Bodyweight Hip Thrust |"
 ./samples/legs/buttbuilder.pdf,"The Butt Builder
 Exercise Sets Reps
 Superset
@@ -3154,7 +3903,13 @@ Author:  Julie Michaelson","Here is your reorganized workout plan:
 
 ### Overview
 
-""The Butt Builder"" is a beginner-level program designed to build muscle, specifically focusing on the glutes and legs. This plan is structured as a single-day-per-week workout, making it ideal for those with limited time or as an addition to another routine. Each session is expected to last 45-60 minutes and utilizes barbells, dumbbells, and machines. The program incorporates a high-volume superset to kick things off, followed by targeted exercises to ensure comprehensive development."
+""The Butt Builder"" is a beginner-level program designed to build muscle, specifically focusing on the glutes and legs. This plan is structured as a single-day-per-week workout, making it ideal for those with limited time or as an addition to another routine. Each session is expected to last 45-60 minutes and utilizes barbells, dumbbells, and machines. The program incorporates a high-volume superset to kick things off, followed by targeted exercises to ensure comprehensive development.","### The Butt Builder
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Superset: Squat + Leg Curls | 10 | 10 | |
+| Reverse Barbell Lunges | 4 | 8–10 | |
+| Dumbbell Step Ups | 3 | 12 | |
+| Leg Extensions | 3 | Failure | |"
 ./samples/legs/rp-21glutebuilding.pdf,"RP-21 Glute Workout
 Exercise Sets Reps
 Dynamic Warm Up - 5 Mins
@@ -3222,7 +3977,14 @@ Author:  Eric Brown","Here is your reorganized workout plan:
 
 ### Overview
 
-This is a 1-day per week, glute-focused workout program designed for intermediate lifters, aiming to build muscle over a 4-week duration. Each session is expected to last 45-60 minutes and primarily utilizes barbells and machines. The plan incorporates the ""RP-21"" method, emphasizing heavy compound movements like Deadlifts and a superset for the glutes, followed by isolation work for calves."
+This is a 1-day per week, glute-focused workout program designed for intermediate lifters, aiming to build muscle over a 4-week duration. Each session is expected to last 45-60 minutes and primarily utilizes barbells and machines. The plan incorporates the ""RP-21"" method, emphasizing heavy compound movements like Deadlifts and a superset for the glutes, followed by isolation work for calves.","### RP-21 Glute Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dynamic Warm Up | | | 5 Mins |
+| Mobility Work | | | 5 Mins |
+| Deadlift | 7 | 3 | Get warmed up properly before selecting your opening weight. Rest 1 Min between sets. |
+| Superset: Barbell Hip Thrust + Romanian Deadlift | 6 | 5 | Select a relatively heavy weight for both. Rest 30-45 Secs between the Barbell Hip Thrust and the RDL. |
+| Seated Calf Raise | 6 | 12 | Rest 30 Secs between sets. |"
 ./samples/legs/wheelsworkout8weekprogramtobuildyourlegs.pdf,"Leg Day 1: Hamstring Emphasis 
 Exercise Sets Reps
 Single Leg Curl 4 10 Each
@@ -3319,7 +4081,24 @@ Target Gender: Male & FemaleAuthor:  Roger “Rock” Lockridge
 
 ### Overview
 
-This ""Wheels Workout"" is an 8-week program designed to build muscle, specifically focusing on leg development. Despite the source stating ""1 Day Per Week,"" the plan clearly outlines two distinct leg-focused training days: one emphasizing hamstrings and the other quadriceps. This suggests a 2-day per week split dedicated to legs. Each workout is estimated to take 45-60 minutes and is suitable for beginners, utilizing a variety of equipment including bands, barbells, dumbbells, and machines."
+This ""Wheels Workout"" is an 8-week program designed to build muscle, specifically focusing on leg development. Despite the source stating ""1 Day Per Week,"" the plan clearly outlines two distinct leg-focused training days: one emphasizing hamstrings and the other quadriceps. This suggests a 2-day per week split dedicated to legs. Each workout is estimated to take 45-60 minutes and is suitable for beginners, utilizing a variety of equipment including bands, barbells, dumbbells, and machines.","### Leg Day 1: Hamstring Emphasis
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Single Leg Curl | 4 | 10 Each | |
+| Stiff-Legged Deadlift | 3 | 10, 8, 6 | |
+| Banded Good Mornings | 3 | 12 | |
+| Superset: Adductor Machine + Abductor Machine | 3 | 12 | |
+| Leg Press | 3 | 12 | |
+| Goblet Squat | 3 | 12 | |
+
+### Leg Day 2: Quadriceps Emphasis
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Single Leg Extension | 4 | 10 Each | |
+| Front Squat | 4 | 10, 8, 6, 6 | |
+| Hack Squat | 3 | 12 | |
+| Barbell Hip Thrust | 3 | 12 | |
+| Lying Leg Curl | 3 | 15 | |"
 ./samples/muscle-building/5daymuscleandstrengthbuildingworkoutsplit.pdf,"Monday: Upper Body Strength Workout
 Exercise Sets Reps
 1. Weighted Wide Grip Pull Ups 2 -3 4 - 6
@@ -3596,7 +4375,72 @@ MachinesTarget Gender: Male Author:  Trevor Kouritzin
 
 ### Overview
 
-This is a 5-day per week workout split designed for intermediate lifters with the primary goal of building muscle and strength. The program strategically combines two strength-focused workouts (Upper Body, Lower Body) with three hypertrophy-focused ""size"" workouts (Back/Shoulders, Chest/Arms, Legs). An additional Ab Workout is included to be performed 3 times per week, offering flexibility on when to incorporate it. Each workout session is estimated to take 60-90 minutes."
+This is a 5-day per week workout split designed for intermediate lifters with the primary goal of building muscle and strength. The program strategically combines two strength-focused workouts (Upper Body, Lower Body) with three hypertrophy-focused ""size"" workouts (Back/Shoulders, Chest/Arms, Legs). An additional Ab Workout is included to be performed 3 times per week, offering flexibility on when to incorporate it. Each workout session is estimated to take 60-90 minutes.","### Monday: Upper Body Strength Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Weighted Wide Grip Pull Ups | 2–3 | 4–6 | |
+| Bent Over Barbell Row | 4–5 | 4–6 | |
+| Narrow Grip T-Bar Row | 2–3 | 4–6 | |
+| Standing Overhead Barbell Press | 4–5 | 4–6 | |
+| Incline Dumbbell Bench Press | 4–5 | 4–6 | |
+| Weighted Dips | 2–3 | 4–6 | |
+| EZ Bar Skullcrusher | 2–3 | 4–6 | |
+| EZ Bar Bicep Curls | 2–3 | 4–6 | |
+
+### Tuesday: Lower Body Strength Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Squats | 4–5 | 4–6 | |
+| Hack Squats | 2–3 | 4–6 | |
+| Deadlifts | 4–5 | 4–6 | |
+| Lying Leg Curls | 2–3 | 4–6 | |
+| Standing Calf Raise | 4–5 | 4–6 | |
+| Seated Calf Raise | 2–3 | 4–6 | |
+
+### Thursday: Back/Shoulders Size Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Superset: Wide Grip Pull Down + Narrow Grip Pull Down | 4–5 | 8–12 | |
+| Chest Supported Machine Row | 4–5 | 8–12 | |
+| Narrow Grip Low Pulley Cable Row | 2–3 | 8–12 | |
+| Superset: Straight Arm Rope Pull Down + Lower Back Hyperextensions | 2–3 | 8–12 | |
+| Dumbbell Shoulder Press | 4–5 | 8–12 | |
+| Standing Dumbbell Side Lateral Raise | 2–3 | 8–12 | |
+| Standing EZ Bar Front Raise | 2–3 | 8–12 | |
+| Dumbbell Rear Delt Lateral Raise | 2–3 | 8–12 | |
+| Superset: Cable EZ Bar Upright Row + Rope Face Pull | 2–3 | 8–12 | |
+
+### Friday: Chest/Arms Size Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Incline Barbell Bench Press | 4–5 | 8–12 | |
+| Superset: Flat Machine Chest Press + Incline Dumbbell Fly | 2–3 | 8–12 | |
+| Cable Crossover | 2–3 | 8–12 | |
+| Narrow Grip Bench Press | 2–3 | 8–12 | |
+| Seated Overhead EZ Bar Tricep Extension | 2–3 | 8–12 | |
+| Single Arm Cable Press Down | 2–3 | 8–12 | |
+| EZ Bar Preacher Curl | 2–3 | 8–12 | |
+| Standing Alternating Dumbbell Hammer Curl | 2–3 | 8–12 | |
+| High Pulley Single Arm Bicep Curl | 2–3 | 8–12 | |
+
+### Saturday: Legs Size Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Superset: Seated Hamstring Curl + Leg Extension | 4–5 | 8–12 | |
+| Front Squat | 4–5 | 8–12 | |
+| Superset: Leg Press + Barbell Walking Lunge | 4–5 | 8–12 | Barbell Walking Lunge: Each |
+| Superset: Abductor Machine + Adductor Machine | 2–3 | 8–12 | |
+| Glute Kick Backs | 2–3 | 8–12 | Each |
+| Donkey Calf Raise | 4–5 | 8–12 | |
+| Superset: Seated Calf Raise + Single Leg Calf Press | 4–5 | 8–12 | Single Leg Calf Press: Each |
+
+### Ab Workout: 3x Per Week
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Superset: Hanging Leg Raise + Decline Sit Up | 3–4 | 8–12 | |
+| Superset: Lying Leg Raise + Cable Crunch | 3–4 | 15–20 | |
+| Cable Wood Choppers | 3–4 | 15–20 | Per Side |
+| Barbell Ab Roll Out | 3–4 | Failure | (As Many As Possible) |"
 ./samples/muscle-building/dumbbellonly_0.pdf,"Day 1
 Exercise Sets Reps
 1. Dumbbell Squat 3 10
@@ -3714,7 +4558,38 @@ Author:  Josh England","Here is your structured 3-Day Full Body Dumbbell Workout
 
 ### Overview
 
-This is a 3-day per week full-body dumbbell-only workout program designed for beginners, with a primary goal of building muscle. Each session is estimated to take 25-30 minutes, making it efficient for home use or when on the go. The program focuses on compound and isolation movements using only dumbbells to promote overall muscle growth."
+This is a 3-day per week full-body dumbbell-only workout program designed for beginners, with a primary goal of building muscle. Each session is estimated to take 25-30 minutes, making it efficient for home use or when on the go. The program focuses on compound and isolation movements using only dumbbells to promote overall muscle growth.","### Day 1
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dumbbell Squat | 3 | 10 | |
+| Dumbbell Stiff Legged Deadlift | 3 | 10 | |
+| Bent Over Dumbbell Row | 3 | 10 | |
+| Dumbbell Bench Press | 3 | 10 | |
+| Lateral Raises | 2 | 8 | |
+| Standing Dumbbell Curl | 2 | 8 | |
+| Lying Dumbbell Extension | 2 | 8 | |
+
+### Day 2
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dumbbell Lunge | 3 | 10 | |
+| Dumbbell Hamstring Curl | 3 | 10 | |
+| Dumbbell Deadlift | 3 | 10 | |
+| Dumbbell Military Press | 3 | 10 | |
+| Dumbbell Flys | 2 | 8 | |
+| Hammer Curl | 2 | 8 | |
+| Seated Dumbbell Extension | 2 | 8 | |
+
+### Day 3
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dumbbell Step Up | 3 | 10 | |
+| Dumbbell Stiff Legged Deadlift | 3 | 10 | |
+| One Arm Dumbbell Press | 3 | 10 | |
+| Reverse Grip Dumbbell Press | 3 | 10 | |
+| Dumbbell Rear Delt Fly | 2 | 8 | |
+| Zottman Curl | 2 | 8 | |
+| Close Grip Dumbbell Press | 2 | 8 | |"
 ./samples/muscle-building/dumbbellworkout5day_0.pdf,"Day 1: Chest, Shoulders & Triceps Dumbbell Workout
 Exercise Sets Reps
 1. Dumbbell Bench Press 5 8 - 10
@@ -3893,7 +4768,58 @@ Target Gender: Male & FemaleAuthor:  Josh England
 
 ### Overview
 
-This is a 5-day dumbbell-only workout split designed to build lean muscle mass. The weekly schedule targets different muscle groups across five dedicated training days, including two days for legs and core, and three days focusing on upper body (chest/shoulders/triceps, back/biceps, and a complete upper body day). This program is suitable for intermediate training levels and can be performed at home or on the go, requiring only dumbbells."
+This is a 5-day dumbbell-only workout split designed to build lean muscle mass. The weekly schedule targets different muscle groups across five dedicated training days, including two days for legs and core, and three days focusing on upper body (chest/shoulders/triceps, back/biceps, and a complete upper body day). This program is suitable for intermediate training levels and can be performed at home or on the go, requiring only dumbbells.","### Day 1: Chest, Shoulders & Triceps Dumbbell Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dumbbell Bench Press | 5 | 8–10 | |
+| Incline Dumbbell Bench Press | 4 | 8–10 | |
+| Dumbbell Floor Press | 3 | 8–12 | |
+| Standing Dumbbell Press | 4 | 8–10 | |
+| Dumbbell Lateral Raise | 3 | 8–12 | |
+| Dumbbell Tricep Kickbacks | 3 | 8–12 | |
+
+### Day 2: Legs & Core Dumbbell Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dumbbell Goblet Squat | 4 | 8–10 | |
+| Dumbbell Stiff Leg Deadlift | 4 | 8–10 | |
+| Dumbbell Rear Lunge | 4 | 8–10 | Each |
+| Dumbbell Frog Squat | 3 | 8–12 | |
+| Dumbbell Calf Raise | 4 | 20 | |
+| Weighted Crunch | 3 | 20 | |
+| Side Planks | 3 | 20 Secs | Each |
+
+### Day 3: Back & Biceps Dumbbell Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dumbbell Bent Over Row | 4 | 8–12 | |
+| Tripod Dumbbell Row | 4 | 8–12 | Each |
+| Dumbbell Pullover | 3 | 8–12 | |
+| Reverse Grip Dumbbell Row | 4 | 8–12 | |
+| Dumbbell Bicep Curl | 3 | 10–15 | |
+| Dumbbell Hammer Curl | 3 | 10–15 | |
+
+### Day 4: Legs & Core Dumbbell Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Dumbbell Squat | 4 | 8–10 | |
+| Dumbbell Deadlift | 4 | 8–10 | |
+| Dumbbell Split Squat | 3 | 8–12 | Each |
+| Dumbbell Hip Thrust | 4 | 10–15 | |
+| Dumbbell Calf Raise | 4 | 20 | |
+| Dumbbell Side Bends | 3 | 15 | Each |
+| Plank | 3 | 20 Secs | |
+
+### Day 5: Complete Upper Body Dumbbell Workout
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| One Arm Dumbbell Rows | 4 | 8–10 | Each |
+| Dumbbell Arnold Press | 4 | 8–10 | |
+| Incline Dumbbell Bench Press | 4 | 8–12 | |
+| Chest Supported Dumbbell Row | 3 | 8–12 | |
+| Dumbbell Pinwheel Curl | 2 | 8–12 | |
+| Overhead Dumbbell Tricep Extension | 3 | 8–12 | |
+| Dumbbell Shrug | 3 | 12–15 | |"
 ./samples/muscle-building/upper_lower4day.pdf,"Day 1
 Exercise Sets Reps
 Upper Body
@@ -4091,7 +5017,53 @@ Author:  Steve Shaw","Here is your structured weekly workout plan, reorganized f
 
 ### Overview
 
-This is a 4-day per week Upper/Lower split workout program designed to build muscle. It strategically combines heavy compound exercises with machine and cable work, incorporating a focus on 3-second negative repetitions for enhanced muscle engagement. The program is suitable for beginners and aims to provide a balanced approach to training over a 10-week duration."
+This is a 4-day per week Upper/Lower split workout program designed to build muscle. It strategically combines heavy compound exercises with machine and cable work, incorporating a focus on 3-second negative repetitions for enhanced muscle engagement. The program is suitable for beginners and aims to provide a balanced approach to training over a 10-week duration.","### Day 1 – Upper Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Bench Press | 3 | 6–12 | |
+| Barbell Row | 3 | 6–12 | |
+| Seated Overhead Dumbbell Press | 3 | 8–12 | |
+| Pec Dec | 2 | 10–12 | 3 sec negative |
+| V-Bar Lat Pull Down | 2 | 10–12 | 3 sec negative |
+| Side Lateral Raise | 2 | 10–15 | |
+| Cable Tricep Extensions | 3 | 8–12 | 3 sec negative |
+| Cable Curls | 3 | 8–12 | 3 sec negative |
+
+### Day 2 – Lower Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Squats | 3 | 6–12 | |
+| Stiff Leg Deadlifts | 3 | 8–12 | |
+| Standing Calf Raise | 3 | 10–15 | |
+| Leg Extensions | 2 | 10–12 | 3 sec negative |
+| Leg Curl | 2 | 10–12 | 3 sec negative |
+| Seated Calf Raise | 2 | 10–12 | 3 sec negative |
+| Cable Crunch | 3 | 10–12 | 3 sec negative |
+| Cable Pull Through w/Rope | 3 | 10–12 | |
+
+### Day 5 – Lower Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Leg Press | 3 | 10–20 | |
+| Dumbbell Stiff Leg Deadlifts | 3 | 8–12 | |
+| Leg Press Calf Raise | 3 | 10–15 | |
+| Hack Squat | 2 | 8–12 | |
+| Seated Leg Curl | 2 | 10–12 | 3 sec negative |
+| Seated Calf Raise | 2 | 10–12 | 3 sec negative |
+| Planks | 3 | 60 sec | |
+| Hyperextension | 3 | 10–12 | |
+
+### Day 4 – Upper Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Incline Dumbbell Bench Press | 3 | 8–12 | |
+| Rack Deadlifts | 3 | 5–8 | 3” - 5” off ground |
+| Military Press | 3 | 8–12 | |
+| Machine Chest Press | 2 | 8–12 | 3 sec negative |
+| Pull Ups or Machine Rows | 2 | 8–12 | 3 sec negative |
+| Machine Shoulder Press | 2 | 8–12 | 3 sec negative |
+| Dumbbell Curls | 3 | 8–12 | 3 sec negative |
+| Machine Tricep Dip | 3 | 8–12 | 3 sec negative |"
 ./samples/shoulder/coconutshoulders.pdf,"Week 1: Heavy
 Exercise Sets Reps
 Shoulders
@@ -4242,7 +5214,33 @@ This week targets the shoulders with an intense superset and drop sets, followed
 
 ### Overview
 
-This plan outlines three distinct, single-day workout sessions, each designed to be performed in a separate week. The primary focus is on shoulders and traps, progressing from a heavy, strength-focused approach in Week 1 to more intense ""shock"" techniques like supersets, specific rep timings, and drop sets in Weeks 2 and 3. Week 2 places a special emphasis on shocking the traps, while Week 3 intensely targets the shoulders."
+This plan outlines three distinct, single-day workout sessions, each designed to be performed in a separate week. The primary focus is on shoulders and traps, progressing from a heavy, strength-focused approach in Week 1 to more intense ""shock"" techniques like supersets, specific rep timings, and drop sets in Weeks 2 and 3. Week 2 places a special emphasis on shocking the traps, while Week 3 intensely targets the shoulders.","### Week 1: Heavy
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Military Press | 3 | 8 | |
+| Seated Dumbbell Press | 3 | 10 | |
+| Seated Dumbbell Lateral Raise | 3 | 12 | Slow tempo |
+| Dumbbell Reverse Fly | 3 | 12 | Slow tempo |
+| Dumbbell Shrug | 3 | 8 | |
+| Smith Machine Upright Row | 3 | 12 | |
+
+### Week 2: Traps Shock
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Superset: Upright Row + Barbell Shrug | 4 | 8 / AMAP | Lift heavy & use the same weight for both exercises. Hold the top position for 4 counts & lower slowly (1-4-2 rep timing). |
+| Arnold Press | 3 | 8 | Slow rep timing |
+| Cable Front Raise | 3 | 12 | Slow rep timing |
+| One Arm Cable Lateral Raise | 3 | 12 | Slow rep timing |
+| Dumbbell Reverse Fly | 3 | 12 | Slow rep timing |
+
+### Week 3: Shoulders Shock
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Superset: Dumbbell Press + Barbell Front Raise | 4 | 8 / 12 | Dumbbell Press (Heavy). Barbell Front Raise: 2-2-2 rep timing. |
+| Dumbbell Lateral Raise | 4 | AMAP | Drop set: Start with a weight for 8–10 reps, drop down doing maximum reps on each weight. Aim for a minimum of 3 drops. |
+| Dumbbell Reverse Fly | 4 | AMAP | Drop set: Start with a weight for 8–10 reps, drop down doing maximum reps on each weight. Aim for a minimum of 3 drops. |
+| Barbell Shrug | 3 | 12 | |
+| Cable Upright Row | 3 | 10 | |"
 ./samples/shoulder/deltoiddestructionhighvolumeintensity.pdf,"High Volume & Intensity
 Exercise Sets Reps
 Machine Side Lateral Raises 4 10, 12, 15, 20
@@ -4297,7 +5295,15 @@ Author:  Team Allmax","Here is your reorganized workout plan:
 
 ### Overview
 
-This workout is a single-day, high-volume and intensity shoulder session designed to build muscle, specifically targeting the deltoids. It is an advanced-level program, intended to be performed once per week, with each session lasting approximately 45-60 minutes. The plan utilizes a variety of equipment including barbells, dumbbells, and machines to hit the shoulders from multiple angles."
+This workout is a single-day, high-volume and intensity shoulder session designed to build muscle, specifically targeting the deltoids. It is an advanced-level program, intended to be performed once per week, with each session lasting approximately 45-60 minutes. The plan utilizes a variety of equipment including barbells, dumbbells, and machines to hit the shoulders from multiple angles.","### DELTOID DESTRUCTION: HIGH VOLUME & INTENSITY SHOULDER WORKOUT
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Machine Side Lateral Raises | 4 | 10, 12, 15, 20 | |
+| Barbell Military Press | 3 | 12–15 | |
+| Barbell Upright Row | 3 | 10–12 | |
+| Seated Dumbbell Front Raise | 3 | 15 | |
+| Seated Rear Dumbbell Lateral Raise | 4 | 20 | |
+| Machine Shrugs | 4 | 10 | |"
 ./samples/shoulder/theperfectworkoutforrocksolidshoulders.pdf,"Shoulder Workout A (Weeks 1, 3, 5, 7)
 Exercise Sets Reps
 Standing Barbell Press 6 2 - 5
@@ -4373,7 +5379,21 @@ Author:  Roger “Rock” Lockridge
 
 ### Overview
 
-This 8-week program is designed for intermediate lifters aiming to build muscle, specifically focusing on developing well-rounded and capped shoulders. It operates on a 1-day-per-week split, alternating between two distinct shoulder workouts (Workout A and Workout B) each week. Each session is expected to last between 45-75 minutes and utilizes a variety of equipment including barbells, cables, dumbbells, and machines."
+This 8-week program is designed for intermediate lifters aiming to build muscle, specifically focusing on developing well-rounded and capped shoulders. It operates on a 1-day-per-week split, alternating between two distinct shoulder workouts (Workout A and Workout B) each week. Each session is expected to last between 45-75 minutes and utilizes a variety of equipment including barbells, cables, dumbbells, and machines.","### Shoulder Workout A (Weeks 1, 3, 5, 7)
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Standing Barbell Press | 6 | 2–5 | |
+| Standing Single Arm Lateral Raise | 4 | 6–9 | |
+| Reverse Lateral Raise on Incline Bench | 3 | 10–13 | |
+| Face Pulls | 3 | 10–13 | |
+
+### Shoulder Workout B (Weeks 2, 4, 6, 8)
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Seated Barbell Press | 6 | 2–5 | |
+| Seated Lateral Raise | 4 | 6–9 | |
+| Single Arm Machine Lateral Raise | 3 | 10–13 | |
+| Seated Reverse Machine Fly | 3 | 10–13 | |"
 ./samples/strength/3daypushpulllegs.pdf,"Exercise Sets Reps Rest
 Military Press (AKA Overhead Press) 5 5 1-2 Min
 Dumbbell Bench Press 3 5 1-2 Min
@@ -4473,7 +5493,35 @@ Workout 3: Leg Day","Here is your reorganized weekly workout plan:
 
 ### Overview
 
-This is a 3-day per week Push/Pull/Legs (PPL) workout program designed for beginners, with a primary goal of increasing strength. The program is structured to be followed for 10 weeks, hitting each major muscle group once per week across three dedicated training days. It utilizes a variety of equipment including barbells, dumbbells, cables, and machines."
+This is a 3-day per week Push/Pull/Legs (PPL) workout program designed for beginners, with a primary goal of increasing strength. The program is structured to be followed for 10 weeks, hitting each major muscle group once per week across three dedicated training days. It utilizes a variety of equipment including barbells, dumbbells, cables, and machines.","### Workout 1: Push Day
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Military Press (AKA Overhead Press) | 5 | 5 | 1-2 Min |
+| Dumbbell Bench Press | 3 | 5 | 1-2 Min |
+| Tricep Dip | 3 | 8 | 1-2 Min |
+| Lateral Raise | 3 | 8 | 1-2 Min |
+| Lying Dumbbell Extension | 3 | 8 | 1-2 Min |
+| Tricep Pushdown | 3 | 8 | 1-2 Min |
+
+### Workout 2: Pull Day
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Pull Up or Lat Pull Down | 5 | 5 | 1-2 Min |
+| Bent-Over Barbell Row | 3 | 5 | 1-2 Min |
+| T-Bar Row | 3 | 8 | 1-2 Min |
+| Dumbbell Shrug | 3 | 8 | 1-2 Min |
+| Preacher Curl | 3 | 8 | 1-2 Min |
+| Hammer Curl | 3 | 8 | 1-2 Min |
+
+### Workout 3: Leg Day
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Barbell Squat | 5 | 5 | 1-2 Min |
+| Deadlift | 3 | 5 | 1-2 Min |
+| Leg Press | 3 | 8 | 1-2 Min |
+| Lying Leg Curl | 3 | 8 | 1-2 Min |
+| Leg Extension | 3 | 8 | 1-2 Min |
+| Seated Calf Raise | 3 | 8 | 1-2 Min |"
 ./samples/strength/advancedstrengthbuildingworkout.pdf,"Exercise Sets Reps Rest
 Military Press 5 3 - 5 3 min
 Incline Bench Press 4 3 - 5 3 min
@@ -4619,7 +5667,50 @@ After two seconds, explode up to the starting position.","Here is your reorganiz
 
 ### Overview
 
-This is an advanced 8-week strength building program designed for 5 days per week. The weekly split focuses on a ""Power"" phase (Push, Legs, Pull) followed by ""Dynamic"" days (Lower, Upper) to emphasize different aspects of strength and power development. The main goal of this program is to significantly increase overall strength."
+This is an advanced 8-week strength building program designed for 5 days per week. The weekly split focuses on a ""Power"" phase (Push, Legs, Pull) followed by ""Dynamic"" days (Lower, Upper) to emphasize different aspects of strength and power development. The main goal of this program is to significantly increase overall strength.","### Workout 1: Push Power Day
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Military Press | 5 | 3–5 | |
+| Incline Bench Press | 4 | 3–5 | |
+| Dumbbell Bench Press | 3 | 5 | |
+| Tricep Dip | 3 | 5 | |
+| Overhead EZ Bar Tricep Extension | 3 | 5 | |
+
+### Workout 2: Legs Power Day
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Front Squat | 5 | 3–5 | |
+| Pause Back Squat | 4 | 3–5 | Pause at bottom for 2 seconds |
+| Hack Squat or Leg Press | 3 | 5 | |
+| Seated Leg Curl | 3 | 5 | |
+| Leg Extension | 3 | 5 | |
+
+### Workout 3: Pull Power Day
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Trap Bar or Barbell Rack Pull | 5 | 3–5 | |
+| Pull Ups | 4 | 3–5 | |
+| One Arm Dumbbell Row | 3 | 5 | Each Side |
+| Concentration Curl | 3 | 5 | |
+| Shrug | 3 | 5 | With hold |
+
+### Workout 4: Lower Dynamic Day
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Speed Front Squat | 6 | 3 | |
+| Speed Pause Squat | 6 | 3 | Pause at bottom for 2 seconds |
+| Leg Press | 4 | 4 | |
+| Seated Calf Raise | 2 | 6 | |
+| Lying Leg Raise | 2 | 6 | |
+
+### Workout 5: Upper Dynamic Day
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Speed Barbell Press | 6 | 3 | |
+| Speed Trap Bar or Barbell Rack Pull | 6 | 3 | |
+| Lateral Raise | 4 | 4 | |
+| Barbell Curl | 2 | 6 | |
+| Tricep Extension | 2 | 6 | |"
 ./samples/strength/boostyourbenchpress.pdf,"Exercise Sets Reps Rest
 Barbell Bench Press 5 1 - 4 90 - 120 Sec
 Overhead Barbell Press 3 4 - 6 60 Sec
@@ -4833,7 +5924,55 @@ should leave feeling worked, not drained.","Here is the reorganized workout plan
 
 ### Overview
 
-This is a 10-week strength-focused program designed for beginners, primarily aiming to increase bench press strength. The weekly split consists of four mandatory training days: a heavy upper body day (focused on bench press progression), a lower body day, a light bench press technique day, and another upper body day. An optional fifth day is included for additional lower body development, emphasizing unilateral strength."
+This is a 10-week strength-focused program designed for beginners, primarily aiming to increase bench press strength. The weekly split consists of four mandatory training days: a heavy upper body day (focused on bench press progression), a lower body day, a light bench press technique day, and another upper body day. An optional fifth day is included for additional lower body development, emphasizing unilateral strength.","### Day 1: Upper Body
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Barbell Bench Press | 5 | 1–4 | Rest: 90–120 Sec |
+| Overhead Barbell Press | 3 | 4–6 | Rest: 60 Sec |
+| Bent Over Row | 3 | 4–6 | Rest: 60 Sec |
+| Pull Up | 3 | 4–6 | Rest: 60 Sec |
+| Skull Crushers | 3 | 4–6 | Rest: 60 Sec |
+| Cable Triceps Extension | 3 | 4–6 | Rest: 60 Sec |
+
+### Day 2: Lower Body Day
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Squat | 3 | 8–12 | Rest: 60–90 Sec |
+| Leg Press | 3 | 8–12 | Rest: 60–90 Sec |
+| Hip Adduction Machine | 3 | 8–12 | Rest: 60–90 Sec |
+| Romanian Deadlift | 3 | 8–12 | Rest: 60–90 Sec |
+| Leg Curl | 3 | 8–12 | Rest: 60–90 Sec |
+| Standing Calf Raise | 3 | 8–12 | Rest: 60–90 Sec |
+| Ab Crunch | 3 | 15 | Rest: 60–90 Sec |
+
+### Day 3: Light Bench Day
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Barbell Bench Press | 8 | 3 | Perform paused triples at 50% of max, press explosively. Rest: 30 Sec |
+| Incline Dumbbell Bench Press | 3 | 8–12 | Rest: 60–90 Sec |
+| Lateral Raise | 3 | 8–12 | Rest: 60–90 Sec |
+| Overhead Tricep Extension | 3 | 8–12 | Rest: 60–90 Sec |
+
+### Day 4: Upper Body Day
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Wide Grip Lateral Pull Down | 5 | 8–12 | Rest: 60–90 Sec |
+| Seated Row | 3 | 8–12 | Rest: 60–90 Sec |
+| Bent Over Dumbbell Reverse Fly | 3 | 8–12 | Rest: 60–90 Sec |
+| Front Raise | 3 | 8–12 | Rest: 60–90 Sec |
+| Barbell Curl | 3 | 8–12 | Rest: 60–90 Sec |
+| Hammer Curl | 3 | 8–12 | Rest: 60–90 Sec |
+| Lying Leg Raise | 3 | 15 | Rest: 60–90 Sec |
+
+### Day 5: Lower Body Day (Optional)
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Deadlift | 3 | 8–12 | Rest: 60–90 Sec |
+| Walking Lunge (each leg) | 3 | 8–12 | Rest: 60–90 Sec |
+| Bulgarian Split Squat (each leg) | 3 | 8–12 | Rest: 60–90 Sec |
+| Leg Extension | 3 | 8–12 | Rest: 60–90 Sec |
+| Standing Calf Raise | 3 | 8–12 | Rest: 60–90 Sec |
+| Plank | 3 | 30–60 Sec | Rest: 60–90 Sec |"
 ./samples/strength/superstrength8weekstrengthbuildingworkout.pdf,"Week Sets/Reps Percentages
 Week 1 Max Out Week (test your baseline)
 Week 2 5 sets of 4 with 80% of your max
@@ -5009,4 +6148,42 @@ Summary","# SUPER STRENGTH: 8 WEEK STRENGTH BUILDING WORKOUT FOR BEGINNERS
 
 ## Overview
 
-This is an 8-week strength building program designed for beginners, focusing on increasing overall strength. The program is structured across 5 training days per week, with each day dedicated to a primary compound lift (Squat, Bench Press, Deadlift, Standing Barbell Press, and Bent-Over Barbell Row). The main lifts follow a progressive overload scheme based on percentages of a tested max, with two ""Max Out"" weeks (Week 1 and Week 8) for baseline testing and retesting. Accessory exercises are included each day to complement the main lift and target supporting muscle groups."
+This is an 8-week strength building program designed for beginners, focusing on increasing overall strength. The program is structured across 5 training days per week, with each day dedicated to a primary compound lift (Squat, Bench Press, Deadlift, Standing Barbell Press, and Bent-Over Barbell Row). The main lifts follow a progressive overload scheme based on percentages of a tested max, with two ""Max Out"" weeks (Week 1 and Week 8) for baseline testing and retesting. Accessory exercises are included each day to complement the main lift and target supporting muscle groups.","### Monday - Squat
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Squat | See Chart | See Chart | Refer to weekly progression chart for sets/reps/percentages. |
+| Front Squat | 3 | 5 | |
+| Bulgarian Split Squat | 3 | 8 | |
+| Leg Extension | 3 | 8 | |
+
+### Tuesday - Bench Press
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Bench Press | See Chart | See Chart | Refer to weekly progression chart for sets/reps/percentages. |
+| Incline Bench Press | 3 | 5 | |
+| Dumbbell Fly | 3 | 8 | |
+| Tricep Dips | 3 | 8 | |
+
+### Wednesday - Deadlift
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Deadlift | See Chart | See Chart | Refer to weekly progression chart for sets/reps/percentages. |
+| Good Mornings | 3 | 5 | |
+| Lying Leg Curl | 3 | 8 | |
+| Walking Lunge | 3 | 8 | |
+
+### Thursday - Standing Barbell Press
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Standing Barbell Press | See Chart | See Chart | Refer to weekly progression chart for sets/reps/percentages. |
+| Front Raise | 3 | 5 | |
+| Seated Lateral Raise | 3 | 8 | |
+| Rope Tricep Extension | 3 | 8 | |
+
+### Friday - Bent-Over Barbell Row
+| Exercise | Sets | Reps | Notes |
+|---|---:|---:|---|
+| Bent-Over Barbell Row | See Chart | See Chart | Refer to weekly progression chart for sets/reps/percentages. |
+| Pull Up or Lat Pull Down | 3 | 5 | |
+| Rear Lateral Raise | 3 | 8 | |
+| Incline Dumbbell Curl | 3 | 8 | |"
