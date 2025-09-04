@@ -29,7 +29,8 @@ class PlannerGraph(Graph):
         book_retriever: DocumentRetriever,
         planner_type:PlannerType = PlannerType.FITNESS,
         num_results = 5,
-        use_rag_data = True
+        use_rag_data = True,
+        summarize_logs = True
         # use_web_search = False
     ):
         super().__init__(llm, UserMessages)
@@ -50,7 +51,7 @@ class PlannerGraph(Graph):
         self.num_results = num_results
         self.planner_type = planner_type
         self.reranker = CrossEncoderReranker(model_name='BAAI/bge-reranker-base', device=os.environ['DEVICE'])
-
+        self.summarize_logs = summarize_logs
         # self.use_web_search = use_web_search
         # if self.use_web_search:
         #     self.search_web = get_search_web_tool(num_results = num_results)
@@ -60,7 +61,7 @@ class PlannerGraph(Graph):
     @log_function_call
     def node_log_summary(self, state):
         log_summarized_msgs = self.summarizer.invoke({'user_id': state['user_id']})
-        if log_summarized_msgs['messages']:
+        if self.summarize_logs and log_summarized_msgs['messages']:
             return {'log_summary': log_summarized_msgs['messages'][0].content}
         return {'log_summary': None}
         
@@ -110,7 +111,7 @@ class PlannerGraph(Graph):
         if self.use_rag_data:
             search_queries = [call['args']['query'] for call in state['messages'][-1].tool_calls]
             main_query = " ".join(search_queries)
-            search_results = [self.book_retriever.search(query, self.planner_type.value) for query in search_queries]
+            search_results = [self.book_retriever.search(query, self.planner_type.value, self.num_results) for query in search_queries]
             reranked_results = self.reranker.rerank_multivector(search_results, main_query, deduplicate=True).to_pandas().to_dict()
             reranked_results = sorted(reranked_results['text'].items())
             reranked_results = [r[1] for r in reranked_results]
@@ -126,7 +127,7 @@ class PlannerGraph(Graph):
              SystemMessage(
                 content = prompt
             )
-        ] + state['messages']
+        ] + state['messages'][:-1]
         response = self.llm.invoke(messages)
         out['messages'] = [response]
         return out

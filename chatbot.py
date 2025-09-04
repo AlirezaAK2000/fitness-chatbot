@@ -8,7 +8,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from agents.main import MainGraph
 from db.db_manager import FitnessDB
 from werkzeug.security import check_password_hash
-# from langchain_openai import ChatOpenAI
+from langchain_openai import ChatOpenAI
 
 WELCOME_MESSAGE = """
 **👋 Welcome to Your Personal Fitness Assistant!**
@@ -47,9 +47,19 @@ I’m here to keep you consistent, informed, and motivated!
 load_dotenv()
 
 
-llm = ChatGoogleGenerativeAI(
-    model="gemini-2.5-flash-preview-05-20",
+# llm = ChatGoogleGenerativeAI(
+#     model="gemini-2.5-flash-preview-05-20",
     
+# )
+
+AVALAI_BASE_URL = "https://api.avalai.ir/v1/"
+MODEL = "gpt-4.1-nano"
+
+llm = ChatOpenAI(
+    model=MODEL,
+    base_url=AVALAI_BASE_URL,
+    api_key=os.environ["AVALAI_API_KEY"],
+    temperature=0,
 )
 
 db_manager = FitnessDB()
