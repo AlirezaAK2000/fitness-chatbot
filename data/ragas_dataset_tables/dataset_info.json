@@ -15,7 +15,7 @@
         "dtype": "string",
         "_type": "Value"
       },
-      "_type": "List"
+      "_type": "Sequence"
     }
   },
   "homepage": "",

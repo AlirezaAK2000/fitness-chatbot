@@ -7,7 +7,7 @@ chainlit.md
 *.pyc
 .env
 *.sqlite3
-fitness.db
+*.db
 .files
 .DS_Store
 tests*.ipynb
