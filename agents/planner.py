@@ -39,17 +39,16 @@ class PlannerGraph(Graph):
         self.search_web_prompt = WEBSEARCH_PROMPT
         self.search_doc_prompt = RAG_RETRIEVAL_PROMPT
         self.use_rag_data = use_rag_data
-        self.planner_type = 'fitness' if planner_type == PlannerType.FITNESS else 'dietry'
-        
+        self.planner_type = planner_type
         self.summarizer = LogSummarizerGraph(llm, db_manager, LOG_SUMMARY_PROMPT).compile() 
         self.book_retriever = book_retriever
         self.search_doc = get_search_books_tool(
             self.book_retriever,
-            type_doc = self.planner_type,
+            type_doc = self.planner_type.value,
             num_results = num_results
          )
         self.num_results = num_results
-        self.planner_type = planner_type
+        
         self.reranker = CrossEncoderReranker(model_name='BAAI/bge-reranker-base', device=os.environ['DEVICE'])
         self.summarize_logs = summarize_logs
         # self.use_web_search = use_web_search
